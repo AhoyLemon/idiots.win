@@ -12,5 +12,9 @@ var rounds = [
     wrong1: "why do men cheat",
     wrong2: "why do men have nipples",
     wrong3: "why do people snore"
-  },
+  }
 ];
+
+
+// USE THIS URL....
+// http://suggestqueries.google.com/complete/search?output=toolbar&hl=en&q=why%20do
