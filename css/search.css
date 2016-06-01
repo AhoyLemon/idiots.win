@@ -344,6 +344,7 @@ main .search-top {
   list-style: none;
   font-size: 1.3rem;
   padding: 0.15em .75em;
+  position: relative;
 }
 
 .search-box ul li:hover {
@@ -352,6 +353,51 @@ main .search-top {
 }
 
 .search-box ul li.wrong-answer {
-  background: rgba(0, 0, 0, 0.35);
-  color: rgba(0, 0, 0, 0.75);
+  background: rgba(238, 42, 42, 0.22);
+  color: rgba(238, 42, 42, 0.77);
+}
+
+.search-box ul li.wrong-answer:after {
+  position: absolute;
+  top: 0;
+  right: 0.5em;
+  bottom: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.search-box ul li.wrong-answer[data-place="1"]:after {
+  content: '2';
+}
+
+.search-box ul li.wrong-answer[data-place="2"]:after {
+  content: '3';
+}
+
+.search-box ul li.wrong-answer[data-place="3"]:after {
+  content: '4';
+}
+
+.search-box ul li.wrong-answer[data-place="4"]:after {
+  content: '5';
+}
+
+.search-box ul li.wrong-answer[data-place="5"]:after {
+  content: '6';
+}
+
+.search-box ul li.wrong-answer[data-place="6"]:after {
+  content: '7';
+}
+
+.search-box ul li.wrong-answer[data-place="7"]:after {
+  content: '8';
+}
+
+.search-box ul li.wrong-answer[data-place="8"]:after {
+  content: '9';
+}
+
+.search-box ul li.wrong-answer[data-place="9"]:after {
+  content: '10';
 }

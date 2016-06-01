@@ -9,10 +9,21 @@ main { @include flex-container(); justify-content: center; height:80vh; align-co
   }
   .fake-input { height: 2.2rem; }
   ul { background-color:$white; border:1px solid $black; @include position(absolute,2.2rem,0,null,0); color:$black; padding:0;
-    li { list-style: none; font-size:1.3rem; padding: 0.15em .75em;
+    li { list-style: none; font-size:1.3rem; padding: 0.15em .75em; position: relative;
       //&.correct { color:green; }
       &:hover { background:$blue; cursor: pointer; }
-      &.wrong-answer { background:rgba(0,0,0,0.35); color: rgba(0,0,0,0.75); }
+      &.wrong-answer { background:rgba($red,0.22); color: rgba($red,0.77);
+        &:after { @include position(absolute,0,0.5em,0); font-size:1.2em; font-weight:bold; }
+        &[data-place="1"]:after { content:'2'; }
+        &[data-place="2"]:after { content:'3'; }
+        &[data-place="3"]:after { content:'4'; }
+        &[data-place="4"]:after { content:'5'; }
+        &[data-place="5"]:after { content:'6'; }
+        &[data-place="6"]:after { content:'7'; }
+        &[data-place="7"]:after { content:'8'; }
+        &[data-place="8"]:after { content:'9'; }
+        &[data-place="9"]:after { content:'10'; }
+      }
     }
   }
 }
