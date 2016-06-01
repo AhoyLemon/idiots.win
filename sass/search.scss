@@ -1,0 +1,11 @@
+//NORMALIZE, GET DEFAULTS
+@import "globals/_reset";
+@import "globals/_variables";
+@import "globals/_mixins";
+@import "globals/_extends";
+@import "globals/_z-index";
+@import "globals/_defaults";
+
+//PARTIALS
+@import "partials/_main"
+
