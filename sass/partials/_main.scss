@@ -1,6 +1,6 @@
 main { @include flex-container(); justify-content: center; height:80vh; align-content: center; align-items: center;
   .child { width: 100%; max-width: $max-width; margin-left: auto; margin-right: auto; }
-  .search-top { padding: 0.25em 0.95em; font-size:1.8em; font-weight: $medium;padding: 0; color:lighten($blue,40%); }
+  .search-top { padding: 0.25em 0.95em; font-size:1.8em; font-weight: $medium;padding: 0; color:lighten($blue,40%); padding-left: 0.6em; }
 }
 
 .search-box { height: 2rem; background: lime; position: relative;
