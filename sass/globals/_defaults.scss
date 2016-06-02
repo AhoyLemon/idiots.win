@@ -7,12 +7,12 @@ img { max-width: 100%; height: auto; }
 a { cursor: pointer; color:$link; }
 b, strong { font-weight: $bold; }
 h1, h2, h3, h4, h5, h6 { font-family: $sans-serif; }
-h1 { font-size:2.5em; font-weight: $light; }
-h2 { font-size:2em; font-weight: $light; }
-h3 { font-size:1.75em; font-weight: $light; }
-h4 { font-size:1.5em; font-weight: $normal; }
-h5 { font-size:1.25em; font-weight: $normal; }
-h6 { font-size:1em; font-weight: $normal; }
+h1 { font-size:2.5em; }
+h2 { font-size:2em; }
+h3 { font-size:1.75em; }
+h4 { font-size:1.5em; }
+h5 { font-size:1.25em; }
+h6 { font-size:1em; }
 h1, h2, h3, h4, h5, h6 { line-height: 105%; }
 ul { padding-left: 1.5em; 
   li { list-style-type: disc; }

@@ -75,6 +75,41 @@ var rounds = [
     query: "can your",
     right: "can your pet",
     author: "Montrith"
+  },
+  {
+    query: "have we ever",
+    right: "have we ever had a jewish president",
+    author: "Montrith"
+  },
+  {
+    query: "can you think",
+    right: "can you think yourself sick",
+    author: "Montrith"
+  },
+  {
+    query: "how can i tell",
+    right: "how can i tell if my iphone is unlocked",
+    author: "Montrith"
+  },
+  {
+    query: "blood from",
+    right: "blood from a stone",
+    author: "Montrith"
+  },
+  {
+    query: "help poop",
+    right: "help poop after surgery",
+    author: "Montrith"
+  },
+  {
+    query: "are your p",
+    right: "are your parents home",
+    author: "Montrith"
+  },
+  {
+    query: "can humans",
+    right: "can humans get fleas",
+    author: "Montrith"
   }
 ];
 

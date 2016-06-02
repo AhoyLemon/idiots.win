@@ -4,9 +4,13 @@
 doctype html
 html(lang="en")
   head
+    link(href='https://fonts.googleapis.com/css?family=Catamaran:400,300,600' rel='stylesheet' type='text/css')
     link(rel="stylesheet" type="text/css" href="/css/search.css")
     title TEST
   body
+    include partials/header.jade
+    include partials/sidebar.jade
+    
     main
       .child
         .search-top What is Google's top result for...

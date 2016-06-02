@@ -1,11 +1,13 @@
 // COLORS
 $white: #eee;
+$offwhite: #f0f1f2;
 $black: #313131;
 $blue: #4885ed;
 $red: #ee2a2a;
 $green: #3eae12;
 $yellow:#e5e972;
 $teal: #4e7f71;
+$lessdark:#2A313A;
   // COLOR UTILITIES
   $body: $black;
   $copy: $white;
@@ -25,23 +27,19 @@ $teal: #4e7f71;
   $color-facebook: #3B5998;
 
 // FONTS
-$source: 'Pompiere', sans-serif;
-$lora: 'Lora', serif;
-$helvetica: Helvetica, arial, sans-serif;
+$quicksand: 'Catamaran', sans-serif;
 $font-size: 18px;
 $light:300;
-$normal:400;
+$medium:400;
 $bold:600;
 
 // FONT UTILITIES
-$sans-serif: $source;
-$serif: $lora;
-$button-font: $helvetica;
+$sans-serif: $quicksand;
 
 // MEASUREMENTS //////////////////////////////////////////////////////////////////////
 $mobile-top:56px;
 $radius:6px;
 $mobile-max: 767px;
 $desktop-min: 768px;
-
+$header-height:3.5rem;
 $max-width:600px;

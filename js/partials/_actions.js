@@ -5,9 +5,18 @@ $(document).ready(function() {
 });
 
 $('#Results').on('click', 'li', function() {
+  round.guesses++;
   if ($(this).attr('data-place') == "0") {
-    newRound();
+    $(this).addClass('correct-answer');
+    $(this).siblings().addClass('wrong-answer');
+    correctAnswer();
+    setTimeout('erase()', 350);
   } else {
     $(this).addClass('wrong-answer');
   }
 });
+
+$('button.hamburger').click(function() {
+  $(this).toggleClass('is-active');
+  $('.sidebar').toggleClass('visible');
+})

@@ -198,7 +198,7 @@ html {
 body {
   background-color: #313131;
   color: #eee;
-  font-family: "Pompiere", sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 
 img {
@@ -216,37 +216,31 @@ b, strong {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Pompiere", sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 
 h1 {
   font-size: 2.5em;
-  font-weight: 300;
 }
 
 h2 {
   font-size: 2em;
-  font-weight: 300;
 }
 
 h3 {
   font-size: 1.75em;
-  font-weight: 300;
 }
 
 h4 {
   font-size: 1.5em;
-  font-weight: 400;
 }
 
 h5 {
   font-size: 1.25em;
-  font-weight: 400;
 }
 
 h6 {
   font-size: 1em;
-  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -301,6 +295,10 @@ main .child {
 
 main .search-top {
   padding: 0.25em 0.95em;
+  font-size: 1.8em;
+  font-weight: 400;
+  padding: 0;
+  color: white;
 }
 
 .search-box {
@@ -321,19 +319,15 @@ main .search-top {
   color: #313131;
 }
 
-.search-box .fake-input:focus, .search-box .fake-input:hover, .search-box input:focus, .search-box input:hover {
-  border-color: blue;
-}
-
 .search-box .fake-input {
-  height: 2.2rem;
+  height: 2.6rem;
 }
 
 .search-box ul {
   background-color: #eee;
   border: 1px solid #313131;
   position: absolute;
-  top: 2.2rem;
+  top: 2.5rem;
   right: 0;
   left: 0;
   color: #313131;
@@ -400,4 +394,200 @@ main .search-top {
 
 .search-box ul li.wrong-answer[data-place="9"]:after {
   content: '10';
+}
+
+.search-box ul li.correct-answer {
+  background: rgba(62, 174, 18, 0.22);
+  color: rgba(62, 174, 18, 0.77);
+}
+
+.search-box ul li.correct-answer:after {
+  position: absolute;
+  top: 0;
+  right: 0.5em;
+  bottom: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  content: "\2713 ";
+  cursor: default;
+}
+
+header {
+  background-color: #2A313A;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  height: 3.5rem;
+  z-index: 4;
+}
+
+header span {
+  display: block;
+  vertical-align: middle;
+}
+
+header .label {
+  font-size: 0.7em;
+  font-family: "Catamaran", sans-serif;
+  line-height: 200%;
+}
+
+header .number {
+  font-size: 1.8em;
+  font-weight: 300;
+  line-height: 50%;
+  color: #3eae12;
+}
+
+header .number.bad {
+  color: #ee2a2a;
+}
+
+header > .inner {
+  color: #eee;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: strech;
+  -ms-flex-align: strech;
+  align-items: strech;
+  padding-top: 0.2rem;
+}
+
+header > .inner .box {
+  flex-basis: 16.6%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-self: auto;
+  text-align: center;
+}
+
+header > .inner .box.zero {
+  opacity: 0;
+}
+
+header .hamburger-holder {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+}
+
+header .hamburger {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #4885ed;
+  outline: none;
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+header .hamburger svg {
+  fill: currentColor;
+}
+
+header .hamburger g {
+  transform-origin: center;
+  transition: all 0.3s linear;
+}
+
+header .hamburger .close {
+  opacity: 0.2;
+  transform: scale(0.2);
+}
+
+header .hamburger.is-active .close {
+  opacity: 1;
+  transform: scale(1);
+}
+
+header .hamburger.is-active .open {
+  opacity: 0.2;
+  transform: scale(0.2);
+}
+
+@media (max-width: 600px) {
+  header > .inner .box {
+    flex-basis: 33.3333%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: auto;
+  }
+  header > .inner .box.hamburger-holder {
+    flex-basis: 3rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: auto;
+  }
+  header .hamburger-holder {
+    text-align: right !important;
+  }
+  header .hamburger-holder .hamburger {
+    position: relative;
+    top: auto;
+    right: auto;
+    height: 100%;
+  }
+  header .hamburger-holder .hamburger svg {
+    height: 1.6rem;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 3.5rem;
+  right: 0;
+  background: #f0f1f2;
+  color: #313131;
+  width: 14rem;
+  padding: 1rem;
+  z-index: 3;
+  transform: translateX(101%);
+  transition: all 0.3s ease;
+}
+
+.sidebar ul {
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.65em;
+  list-style: none;
+}
+
+.sidebar .label {
+  display: block;
+}
+
+.sidebar .indent {
+  display: block;
+  padding-left: 0.75em;
+  font-weight: 600;
+}
+
+.sidebar a {
+  color: #4885ed;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.sidebar .smaller {
+  font-size: 0.8em;
+}
+
+.sidebar.visible {
+  transform: translateX(0);
 }

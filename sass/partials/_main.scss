@@ -1,14 +1,12 @@
 main { @include flex-container(); justify-content: center; height:80vh; align-content: center; align-items: center;
   .child { width: 100%; max-width: $max-width; margin-left: auto; margin-right: auto; }
-  .search-top { padding: 0.25em 0.95em; }
+  .search-top { padding: 0.25em 0.95em; font-size:1.8em; font-weight: $medium;padding: 0; color:lighten($blue,40%); }
 }
 
 .search-box { height: 2rem; background: lime; position: relative;
-  .fake-input, input { display: block; border:1px solid $black; outline: none; width:100%; font-size:1.3rem; padding:0.25em 0.65em; background:$white; font-weight: bold; color:$black;
-    &:focus, &:hover { border-color: blue; }
-  }
-  .fake-input { height: 2.2rem; }
-  ul { background-color:$white; border:1px solid $black; @include position(absolute,2.2rem,0,null,0); color:$black; padding:0;
+  .fake-input, input { display: block; border:1px solid $black; outline: none; width:100%; font-size:1.3rem; padding:0.25em 0.65em; background:$white; font-weight: bold; color:$black; }
+  .fake-input { height: 2.6rem; }
+  ul { background-color:$white; border:1px solid $black; @include position(absolute,2.5rem,0,null,0); color:$black; padding:0;
     li { list-style: none; font-size:1.3rem; padding: 0.15em .75em; position: relative;
       //&.correct { color:green; }
       &:hover { background:$blue; cursor: pointer; }
@@ -23,6 +21,9 @@ main { @include flex-container(); justify-content: center; height:80vh; align-co
         &[data-place="7"]:after { content:'8'; }
         &[data-place="8"]:after { content:'9'; }
         &[data-place="9"]:after { content:'10'; }
+      }
+      &.correct-answer { background:rgba($green,0.22); color: rgba($green,0.77);
+        &:after { @include position(absolute,0,0.5em,0); font-size:1.2em; font-weight:bold; content:"\2713 "; cursor: default; }
       }
     }
   }

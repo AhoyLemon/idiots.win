@@ -12,11 +12,20 @@ function testTypingEffect() {
 function type() {
   captionEl.html(myQuery.substr(0, captionLength++));
   if(captionLength < myQuery.length+1) {
-    setTimeout('type()', 93);
+    setTimeout('type()', 101);
   } else {
-    captionLength = 0;
     pullResults();
   }
+}
+
+function erase() {
+  captionEl.html(myQuery.substr(0, captionLength--));
+  if(captionLength >= 0) {
+    setTimeout('erase()', 101);
+  } else {
+    captionLength = 0;
+    newRound();
+  }	
 }
 
 function pullResults() {
@@ -38,6 +47,37 @@ function pullResults() {
       $('#Results').append('<li data-place="'+answers[key][1]+'"><b>'+myQuery+'</b>'+res[1]+'</li>');
     });
   };
+}
+
+function correctAnswer() {
+  if (round.guesses == 1) {
+    player.great++;
+    $('#GreatBox').removeClass('zero');
+    $('#NumberGreat').text(player.great);
+    player.score = player.score + 4;
+  } else if (round.guesses == 2) {
+    player.great++;
+    $('#NumberGreat').text(player.great);
+    $('#GreatBox').removeClass('zero');
+    player.score = player.score + 3;
+  } else if (round.guesses == 3) {
+    player.okay++;
+    $('#NumberOkay').text(player.okay);
+    $('#OkayBox').removeClass('zero');
+    player.score = player.score + 2;
+  } else if (round.guesses == 4) {
+    player.bad++;
+    $('#NumberBad').text(player.bad);
+    $('#BadBox').removeClass('zero');
+    player.score = player.score + 1;
+  } else if (round.guesses == 5) {
+    player.failure++;
+    $('#NumberFailure').text(player.failure);
+    $('#FailureBox').removeClass('zero');
+  }
+  $('#NumberScore').text(player.score);
+  $('#ScoreBox').removeClass('zero');
+  round.guesses = 0;
 }
 
 function newRound() {
