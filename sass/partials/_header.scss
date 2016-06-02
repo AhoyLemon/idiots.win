@@ -1,4 +1,4 @@
-header { background-color:$lessdark; @include position(fixed,0,0,null,0); padding-top:0.25em; padding-bottom:0.25em; height:$header-height; z-index:$z-header;
+header { @include position(fixed,0,0,null,0); padding-top:0.25em; padding-bottom:0.25em; height:$header-height; z-index:$z-header;
   > .inner { padding-right: 4rem; }
   span { display:block; vertical-align: middle; }
   //.percent { display: none; }
@@ -12,14 +12,14 @@ header { background-color:$lessdark; @include position(fixed,0,0,null,0); paddin
   }
   
   > .inner { color:$white; max-width: 700px; margin-left: auto; margin-right: auto;  @include flex-container(); padding-top:0.2rem;
-    .box { @include flex-item(16.6%); text-align: center;
-      &.zero { opacity: 0; }
+    .box { @include flex-item(16.6%); text-align: center; height: 2.8em;
+       &.zero { opacity: 0; }
     }
   }
   
   .hamburger-holder { @include position(absolute,0.8rem,1rem); }
   .hamburger { background:transparent; border:none; cursor: pointer; color:$blue; outline:none; height: 2.25rem; width: 2.25rem;
-    svg { fill:currentColor;  }
+    svg { fill:$offwhite;  }
     g { transform-origin: center; transition:all 0.3s linear; }
     .close { opacity: 0.2; transform: scale(0.2); }
     &.is-active {
@@ -29,6 +29,7 @@ header { background-color:$lessdark; @include position(fixed,0,0,null,0); paddin
   }
 }
 
+/**
 @media (max-width:$max-width) {
   header { 
     //.number { font-size:1.5em;}
@@ -44,3 +45,5 @@ header { background-color:$lessdark; @include position(fixed,0,0,null,0); paddin
     }
   }
 }
+
+**/

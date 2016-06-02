@@ -1,0 +1,54 @@
+script(type="application/ld+json").
+  {
+    "@context": "http://schema.org",
+    "@type": "VideoGame",
+    "name": "damn.dog",
+    "url": "#{siteURL}",
+    "sameAs": "https://thefpl.us/also-made/damn-dog",
+    "alternateName": "The WikiHow Illustration Game",
+    "image": "#{siteURL}/img/og-image.png",
+    "playMode": "SinglePlayer",
+    "applicationCategory": "browser game",
+    "gamePlatform": "web browser",
+    "operatingSystem": "web browser",
+    "genre": "guessing game",
+    "description": "#{description}",
+    "inLanguage": "English",
+    "author": {
+      "@type": "Person",
+      "name": "Lemon",
+      "url": "https://thefpl.us/meet/lemon",
+      "sameAs": "https://twitter.com/AhoyLemon"
+    },
+    "publisher": {
+      "@type": "PerformingGroup",
+      "name": "The F Plus",
+      "url": "https://thefpl.us"
+    },
+    "offers": {
+      "@type": "Offer",
+      "description": "free",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "screenshot": [
+      {
+        "@type": "ImageObject",
+        "url": "#{siteURL}/img/screenshots/ss1.jpg",
+        "width": "900",
+        "height": "600"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "#{siteURL}/screenshots/ss2.jpg",
+        "width": "600",
+        "height": "745"
+      },
+      {
+        "@type": "ImageObject",
+        "url": "#{siteURL}/screenshots/ss3.jpg",
+        "width": "898",
+        "height": "757"
+      }
+    ]
+  }

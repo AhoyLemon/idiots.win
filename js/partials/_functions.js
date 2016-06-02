@@ -5,10 +5,6 @@ function shuffle(o) {
   return o;
 }
 
-function testTypingEffect() {
-  type();
-}
-
 function type() {
   captionEl.html(myQuery.substr(0, captionLength++));
   if(captionLength < myQuery.length+1) {
@@ -75,58 +71,28 @@ function correctAnswer() {
     $('#NumberFailure').text(player.failure);
     $('#FailureBox').removeClass('zero');
   }
-  $('#NumberScore').text(player.score);
+  //$('#NumberScore').text(player.score);
   $('#ScoreBox').removeClass('zero');
   var guessReadout;
   if (round.guesses == 1) {
     guessReadout = "first try";
   } else {
-    guessReadout = round.guesses + ' tries'
+    guessReadout = round.guesses + ' tries';
   }
   sendGA('round complete', guessReadout, round.guesses);
   round.guesses = 0;
 }
 
-function newRound() {
+function newRound(customQuery) {
   answers = [];
-  var r = Math.floor((Math.random() * rounds.length));
-  correct = rounds[r].right;
-  myQuery = rounds[r].query;
+  if (customQuery) {
+    myQuery = customQuery;
+  } else {
+    r = Math.floor((Math.random() * rounds.length));
+    myQuery = rounds[r].query;
+  }
   //$('#Search').val(myQuery);
   $('#Results').empty();
   //$('.fake-input').text(myQuery);
-  testTypingEffect();
-
-  /**
-  $.each(answers, function(key,value) {
-    var res = value.split(myQuery);
-    if (value == correct) {
-      $('#Results').append('<li class="correct"><b>'+myQuery+'</b>'+res[1]+'</li>');
-    } else {
-      $('#Results').append('<li><b>'+myQuery+'</b>'+res[1]+'</li>');
-    }
-  });
-
-  **/
-  /**
-  if (r == 1) {
-    $(".fake-input").typeIt({
-      speed: 190,
-      callback: function() {
-        setTimeout(function(){ 
-          $.each(answers, function(key,value) {
-            var res = value.split(myQuery);
-            if (value == correct) {
-              $('#Results').append('<li class="correct"><b>'+myQuery+'</b>'+res[1]+'</li>');
-            } else {
-              $('#Results').append('<li><b>'+myQuery+'</b>'+res[1]+'</li>');
-            }
-          });
-        }, 320);
-      }
-    }).tiType(myQuery);
-  } else {
-    $(".fake-input").typeIt().tiType('FUCK YOU.');
-  }
-  */
+  type();
 }

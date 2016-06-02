@@ -1,12 +1,13 @@
+- var siteTitle = "idiots win"
+- var siteURL = "http://idiots.win"
 - var pageTitle = "Home"
-- var lastUpdated = "04.13.2016"
+- var description = "Get overwhelmed by the internet's collective consciousness as you guess the first thing that comes up in Google's autocomplete."
+- var lastUpdated = "06.02.2016"
 
 doctype html
 html(lang="en")
   head
-    link(href='https://fonts.googleapis.com/css?family=Catamaran:400,300,600' rel='stylesheet' type='text/css')
-    link(rel="stylesheet" type="text/css" href="/css/search.css")
-    title idiots.win
+    include partials/head.jade
   body
     include partials/header.jade
     include partials/sidebar.jade
@@ -17,5 +18,6 @@ html(lang="en")
         .search-box
           #FakeSearch.fake-input
           ul#Results
-    
+          
+    include partials/schema.jade
     include partials/javascripts.jade

@@ -8,7 +8,6 @@ main { @include flex-container(); justify-content: center; height:80vh; align-co
   .fake-input { height: 2.6rem; }
   ul { background-color:$white; border:1px solid $black; @include position(absolute,2.5rem,0,null,0); color:$black; padding:0;
     li { list-style: none; font-size:1.3rem; padding: 0.15em .75em; position: relative;
-      //&.correct { color:green; }
       &:hover { background:$blue; cursor: pointer; }
       &.wrong-answer { background:rgba($red,0.22); color: rgba($red,0.77);
         &:after { @include position(absolute,0,0.5em,0); font-size:1.2em; font-weight:bold; }
@@ -26,5 +25,11 @@ main { @include flex-container(); justify-content: center; height:80vh; align-co
         &:after { @include position(absolute,0,0.5em,0); font-size:1.2em; font-weight:bold; content:"\2713 "; cursor: default; }
       }
     }
+  }
+}
+
+@media screen and (max-width:$max-width) {
+  main {
+    .search-top { font-size:5.5vw; }
   }
 }

@@ -4,11 +4,6 @@ var rounds = [
   {
     query: "color of women's",
     right: "color of women's discharge",
-    wrong: [
-      "color of women's suffrage movement",
-      "color of women's day",
-      "color of women's nipples"
-    ],
     author: "Jamie"
   },
   {
@@ -200,6 +195,81 @@ var rounds = [
     query: "can you ki",
     right: "can you kick the ball in volleyball",
     author: "Montrith"
+  },
+  {
+    query: "why is the a",
+    right: "why is the atmosphere important",
+    author: "Montrith"
+  },
+  {
+    query: "is a ch",
+    right: "is a chicken a bird",
+    author: "Montrith"
+  },
+  {
+    query: "can you get a",
+    right: "can you get aids from kissing",
+    author: "Montrith"
+  },
+  {
+    query: "is this f",
+    right: "is this for real",
+    author: "Montrith"
+  },
+  {
+    query: "what's j",
+    right: "is this for real",
+    author: "Montrith"
+  },
+  {
+    query: "can i d",
+    right: "can i drake",
+    author: "Montrith"
+  },
+  {
+    query: "my dad w",
+    right: "my dad works at nintendo",
+    author: "Montrith"
+  },
+  {
+    query: "are there any g",
+    right: "are there any gay animals",
+    author: "Montrith"
+  },
+  {
+    query: "why should a d",
+    right: "are there any gay animals",
+    author: "Montrith"
+  },
+  {
+    query: "are the ch",
+    right: "are the chicago cubs playing today",
+    author: "Montrith"
+  },
+  {
+    query: "how can i f",
+    right: "how can i find my iphone",
+    author: "Montrith"
+  },
+  {
+    query: "dangers of",
+    right: "dangers of vaping",
+    author: "Montrith"
+  },
+  {
+    query: "best go",
+    right: "best gore",
+    author: "Montrith"
+  },
+  {
+    query: "is there sp",
+    right: "is there sperm in precum",
+    author: "Montrith"
+  },
+  {
+    query: "can i be a j",
+    right: "can i be a jew",
+    author: "Lemon"
   },
   {
     query: "is google",
