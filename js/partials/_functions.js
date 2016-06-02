@@ -51,9 +51,9 @@ function pullResults() {
 
 function correctAnswer() {
   if (round.guesses == 1) {
-    player.great++;
-    $('#GreatBox').removeClass('zero');
-    $('#NumberGreat').text(player.great);
+    player.perfect++;
+    $('#PerfectBox').removeClass('zero');
+    $('#NumberPerfect').text(player.perfect);
     player.score = player.score + 4;
   } else if (round.guesses == 2) {
     player.great++;
@@ -77,6 +77,13 @@ function correctAnswer() {
   }
   $('#NumberScore').text(player.score);
   $('#ScoreBox').removeClass('zero');
+  var guessReadout;
+  if (round.guesses == 1) {
+    guessReadout = "first try";
+  } else {
+    guessReadout = round.guesses + ' tries'
+  }
+  sendGA('round complete', guessReadout, round.guesses);
   round.guesses = 0;
 }
 

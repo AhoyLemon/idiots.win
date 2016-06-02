@@ -1,8 +1,8 @@
 .sidebar { @include position(fixed,$header-height,0); background: $offwhite; color:$black; width: 14rem; padding: 1rem; z-index: $z-sidebar;
   ul { padding: 0; }
   li { margin-bottom: 0.65em; list-style: none; }
-  .label { display: block; }
-  .indent { display: block; padding-left: 0.75em; font-weight: $bold; }
+  .label { display: block; line-height: 90% }
+  .indent { display: block; padding-left: 1em; font-weight: $bold; }
   a { color:$blue; text-decoration: none; cursor: pointer; 
     &:hover { text-decoration: underline; }
   }

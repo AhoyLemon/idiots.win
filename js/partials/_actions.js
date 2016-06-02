@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
   newRound();
+  roundCount = rounds.length + 1;
+  $('#RoundCount').text(roundCount);
 });
 
 $('#Results').on('click', 'li', function() {

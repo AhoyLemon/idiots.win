@@ -3,16 +3,16 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Catamaran:400,300,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="/css/search.css">
-    <title>TEST</title>
+    <title>idiots.win</title>
   </head>
   <body>
     <header id="ScoreHeader">
       <div class="inner score-holder">
-        <div id="PerfectBox" class="box zero"><span class="percent label">perfect</span><span id="NumberPerfect" class="percent number">0</span></div>
-        <div id="GreatBox" class="box zero"><span class="percent label">great</span><span id="NumberGreat" class="percent number">0</span></div>
-        <div id="OkayBox" class="box zero"><span class="percent label">okay</span><span id="NumberOkay" class="percent number">0</span></div>
-        <div id="BadBox" class="box zero"><span class="percent label">bad</span><span id="NumberBad" class="percent number">0</span></div>
-        <div id="FailureBox" class="box zero"><span class="percent label">failure</span><span id="NumberFailure" class="percent number">0</span></div>
+        <div id="PerfectBox" class="box zero"><span class="perfect label">perfect</span><span id="NumberPerfect" class="perfect number">0</span></div>
+        <div id="GreatBox" class="box zero"><span class="great label">great</span><span id="NumberGreat" class="great number">0</span></div>
+        <div id="OkayBox" class="box zero"><span class="okay label">okay</span><span id="NumberOkay" class="okay number">0</span></div>
+        <div id="BadBox" class="box zero"><span class="bad label">bad</span><span id="NumberBad" class="bad number">0</span></div>
+        <div id="FailureBox" class="box zero"><span class="failure label">failure</span><span id="NumberFailure" class="failure number">0</span></div>
         <div class="hamburger-holder">
           <button class="hamburger">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -32,10 +32,8 @@
         <li><span class="label">Game by</span><span class="indent"><a href="https://thefpl.us/meet/lemon" target="blank" onclick="sendGA('outside link', 'https://thefpl.us/meet/lemon')">Lemon</a></span></li>
         <li><span class="label">with a lot of help from</span><span class="indent"><a href="https://thefpl.us/meet/montrith" target="blank" onclick="sendGA('outside link', 'https://thefpl.us/meet/montrith')">Montrith</a></span></li>
         <li><span class="label">and no involvement from</span><span class="indent">Google</span></li>
-        <li> <span class="label">Current round count</span><span class="indent"><span class="number-of-rounds"></span></span></li>
+        <li> <span class="label">Current round count</span><span class="indent"><span id="RoundCount" class="number-of-rounds"></span></span></li>
         <li> <span class="label">There's a</span><span class="indent"><a href="https://github.com/AhoyLemon/idiots" target="blank" onclick="sendGA('outside link', 'https://github.com/AhoyLemon/idiots.')">GitHub repo</a></span></li>
-        <li><span class="label">You can</span><span class="indent"><a id="OpenSharebox">share this round.</a></span></li>
-        <li class="smaller">Your progress will be saved if you close this browser.</li>
       </ul>
     </div>
     <main>

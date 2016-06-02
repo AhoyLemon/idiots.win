@@ -1,13 +1,17 @@
 header { background-color:$lessdark; @include position(fixed,0,0,null,0); padding-top:0.25em; padding-bottom:0.25em; height:$header-height; z-index:$z-header;
-  //> .inner { color:$white; @extend %inner; }
+  > .inner { padding-right: 4rem; }
   span { display:block; vertical-align: middle; }
   //.percent { display: none; }
   .label { font-size:0.7em; font-family: $sans-serif; line-height: 200%; }
   .number { font-size:1.8em; font-weight: $light; line-height: 50%; color:$green;
-    &.bad { color:$red; }
+    &.perfect { color:$perfect; }
+    &.great { color:$great; }
+    &.okay { color:$okay; }
+    &.bad { color:$bad; }
+    &.failure { color:$failure; }
   }
   
-  > .inner { color:$white; @extend %inner;  @include flex-container(); padding-top:0.2rem;
+  > .inner { color:$white; max-width: 700px; margin-left: auto; margin-right: auto;  @include flex-container(); padding-top:0.2rem;
     .box { @include flex-item(16.6%); text-align: center;
       &.zero { opacity: 0; }
     }

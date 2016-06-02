@@ -107,8 +107,103 @@ var rounds = [
     author: "Montrith"
   },
   {
+    query: "is body",
+    right: "is bodybuilding a sport",
+    author: "Montrith"
+  },
+  {
+    query: "is my h",
+    right: "is my house haunted",
+    author: "Montrith"
+  },
+  {
+    query: "is ge",
+    right: "is germany in europe",
+    author: "Montrith"
+  },
+  {
+    query: "is mon",
+    right: "is monica lewinsky married",
+    author: "Montrith"
+  },
+  {
+    query: "is war",
+    right: "is war room on netflix",
+    author: "Montrith"
+  },
+  {
+    query: "where can i find g",
+    right: "where can i find girl scout cookies",
+    author: "Montrith"
+  },
+  {
+    query: "how to make the",
+    right: "how to make the color brown",
+    author: "Montrith"
+  },
+  {
+    query: "help my s",
+    right: "help my shelf",
+    author: "Montrith"
+  },
+  {
+    query: "is the inter",
+    right: "is the internet working",
+    author: "Montrith"
+  },
+  {
+    query: "how come",
+    right: "how come we can't remember dreams",
+    author: "Montrith"
+  },
+  {
+    query: "are my r",
+    right: "are my rotors bad",
+    author: "Montrith"
+  },
+  {
+    query: "can the g",
+    right: "can the government own land",
+    author: "Montrith"
+  },
+  {
+    query: "are je",
+    right: "are jews a race",
+    author: "Montrith"
+  },
+  {
+    query: "do va",
+    right: "do vaccines cause autism",
+    author: "Montrith"
+  },
+  {
+    query: "was there e",
+    right: "was there ever a female pope",
+    author: "Montrith"
+  },
+  {
+    query: "is pok",
+    right: "is poker a sport",
+    author: "Montrith"
+  },
+  {
+    query: "can i po",
+    right: "can i post to instagram from my mac",
+    author: "Montrith"
+  },
+  {
     query: "can humans",
     right: "can humans get fleas",
+    author: "Montrith"
+  },
+  {
+    query: "can you ki",
+    right: "can you kick the ball in volleyball",
+    author: "Montrith"
+  },
+  {
+    query: "is google",
+    right: "is google making us stupid",
     author: "Montrith"
   }
 ];

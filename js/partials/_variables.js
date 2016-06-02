@@ -4,6 +4,7 @@ var myQuery;
 var captionEl = $('#FakeSearch');
 var captionLength = 0;
 var answers = [];
+var roundCount;
 var r;
 
 var player = {

@@ -424,6 +424,10 @@ header {
   z-index: 4;
 }
 
+header > .inner {
+  padding-right: 4rem;
+}
+
 header span {
   display: block;
   vertical-align: middle;
@@ -442,12 +446,31 @@ header .number {
   color: #3eae12;
 }
 
+header .number.perfect {
+  color: #52d88e;
+}
+
+header .number.great {
+  color: #61c674;
+}
+
+header .number.okay {
+  color: #3ca2db;
+}
+
 header .number.bad {
-  color: #ee2a2a;
+  color: #ecb528;
+}
+
+header .number.failure {
+  color: #ee2c2c;
 }
 
 header > .inner {
   color: #eee;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -566,11 +589,12 @@ header .hamburger.is-active .open {
 
 .sidebar .label {
   display: block;
+  line-height: 90%;
 }
 
 .sidebar .indent {
   display: block;
-  padding-left: 0.75em;
+  padding-left: 1em;
   font-weight: 600;
 }
 
