@@ -15,16 +15,20 @@ $(document).ready(function() {
 });
 
 $('#Results').on('click', 'li', function() {
-  round.guesses++;
-  if ($(this).attr('data-place') == "0") {
-    $(this).addClass('correct-answer');
-    $(this).siblings().addClass('wrong-answer');
-    correctAnswer();
-    setTimeout(function(){ 
-      erase();
-    }, 300);
+  if ($(this).hasClass('correct-answer') || $(this).hasClass('wrong-answer')) {
+    // do nothing (you already guessed this.)
   } else {
-    $(this).addClass('wrong-answer');
+    round.guesses++;
+    if ($(this).attr('data-place') == "0") {
+      $(this).addClass('correct-answer');
+      $(this).siblings().addClass('wrong-answer');
+      correctAnswer();
+      setTimeout(function(){ 
+        erase();
+      }, 300);
+    } else {
+      $(this).addClass('wrong-answer');
+    }
   }
 });
 
