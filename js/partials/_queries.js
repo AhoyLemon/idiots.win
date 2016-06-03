@@ -272,6 +272,16 @@ var rounds = [
     author: "Lemon"
   },
   {
+    query: "i'm too high to",
+    right: "i'm too high to drive to the devil's house",
+    author: "Lemon"
+  },
+  {
+    query: "where the hell",
+    right: "where the hell is matt",
+    author: "Lemon"
+  },
+  {
     query: "is google",
     right: "is google making us stupid",
     author: "Montrith"
