@@ -33,3 +33,9 @@ main { @include flex-container(); justify-content: center; height:80vh; align-co
     .search-top { font-size:5.5vw; }
   }
 }
+
+@media screen and (max-height:720px) {
+  main { align-items: flex-start; padding-top: 7rem;
+    
+  }
+}

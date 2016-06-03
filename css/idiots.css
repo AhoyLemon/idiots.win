@@ -419,6 +419,13 @@ main .search-top {
   }
 }
 
+@media screen and (max-height: 720px) {
+  main {
+    align-items: flex-start;
+    padding-top: 7rem;
+  }
+}
+
 header {
   position: fixed;
   top: 0;

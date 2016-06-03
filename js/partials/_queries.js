@@ -277,9 +277,64 @@ var rounds = [
     author: "Lemon"
   },
   {
-    query: "where the hell",
+    query: "most creative ways to",
     right: "where the hell is matt",
     author: "Lemon"
+  },
+  {
+    query: "where the hell",
+    right: "most creative ways to ask a girl to prom",
+    author: "Jamie"
+  },
+  {
+    query: "can humans j",
+    right: "can humans jump higher on mars",
+    author: "Montrith"
+  },
+  {
+    query: "is di",
+    right: "is diabetes genetic",
+    author: "Montrith"
+  },
+  {
+    query: "can i pe",
+    right: "can i pet your dog",
+    author: "Montrith"
+  },
+  {
+    query: "making a d",
+    right: "making a difference",
+    author: "Montrith"
+  },
+  {
+    query: "is as",
+    right: "is aspartame bad",
+    author: "Montrith"
+  },
+  {
+    query: "are g",
+    right: "are ghosts real",
+    author: "Montrith"
+  },
+  {
+    query: "help my p",
+    right: "help my parents are millennials",
+    author: "Montrith"
+  },
+  {
+    query: "pics of",
+    right: "pics of bed bugs",
+    author: "Montrith"
+  },
+  {
+    query: "can a f",
+    right: "can a felon vote",
+    author: "Montrith"
+  },
+  {
+    query: "was i st",
+    right: "was i stood up",
+    author: "Montrith"
   },
   {
     query: "is google",
@@ -287,9 +342,6 @@ var rounds = [
     author: "Montrith"
   }
 ];
-
-
-
 
 
 // USE THIS URL....
