@@ -10,6 +10,7 @@ $(document).ready(function() {
       newRound(qd);
     }, 300);
   } else {
+    reRoll = 0;
     newRound();
   }  
 });
