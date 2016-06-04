@@ -20,6 +20,7 @@ function erase() {
     setTimeout('erase()', 101);
   } else {
     captionLength = 0;
+    reRoll = 0;
     newRound();
   }	
 }
@@ -89,10 +90,19 @@ function newRound(customQuery) {
     myQuery = customQuery;
   } else {
     r = Math.floor((Math.random() * rounds.length));
-    myQuery = rounds[r].query;
+    if (player.played.indexOf(rounds[r].query) > -1) {
+      reRoll++;
+      if (reRoll < 8) {
+        newRound();
+      } else {
+        alert("game over.\nYou've played all the rounds I've got. Check back, I'll add more soon.");
+      }
+    } else {
+      myQuery = rounds[r].query;
+      player.played.push(myQuery);
+    }
   }
-  //$('#Search').val(myQuery);
   $('#Results').empty();
-  //$('.fake-input').text(myQuery);
   type();
+  console.log(player);
 }

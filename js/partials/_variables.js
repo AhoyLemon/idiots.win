@@ -6,9 +6,11 @@ var captionLength = 0;
 var answers = [];
 var roundCount;
 var r;
+var reRoll = 0;
 
 var player = {
   rounds:0,
+  played: [],
   score:0,
   perfect:0,
   great:0,
@@ -18,5 +20,6 @@ var player = {
 };
 
 var round = {
+  number:0,
   guesses:0
 };

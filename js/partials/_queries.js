@@ -57,7 +57,7 @@ var rounds = [
     author: "Montrith"
   },
   {
-    query: "can we h",
+    query: "can we have",
     right: "can we hear earthquakes",
     author: "Montrith"
   },
