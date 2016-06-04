@@ -8,7 +8,10 @@ function shuffle(o) {
 function type() {
   captionEl.html(myQuery.substr(0, captionLength++));
   if(captionLength < myQuery.length+1) {
-    setTimeout('type()', 101);
+    //setTimeout('type()', 101);
+    setTimeout(function(){ 
+      type();
+    }, 101);
   } else {
     pullResults();
   }
@@ -17,7 +20,10 @@ function type() {
 function erase() {
   captionEl.html(myQuery.substr(0, captionLength--));
   if(captionLength >= 0) {
-    setTimeout('erase()', 101);
+    //setTimeout('erase()', 101);
+    setTimeout(function(){ 
+      erase();
+    }, 101);
   } else {
     captionLength = 0;
     reRoll = 0;
