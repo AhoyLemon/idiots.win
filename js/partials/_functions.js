@@ -41,8 +41,13 @@ function pullResults() {
   suggestCallBack = function (data) {
     $.each(data[1], function(key,value) {
       answers.push([data[1][key][0], key]);
+      if (data[1][key][0] == myQuery) {
+        answers.splice(key,1);
+      }
     });
-    answers.length = 5;
+    if (answers.length > 5) {
+      answers.length = 5;
+    }
     shuffle(answers);
     console.log(answers);
     $.each(answers, function(key,value) {
