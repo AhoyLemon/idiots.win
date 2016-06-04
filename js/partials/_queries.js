@@ -92,11 +92,6 @@ var rounds = [
     author: "Montrith"
   },
   {
-    query: "help poop",
-    right: "help poop after surgery",
-    author: "Montrith"
-  },
-  {
     query: "are your p",
     right: "are your parents home",
     author: "Montrith"
@@ -334,6 +329,21 @@ var rounds = [
   {
     query: "was i st",
     right: "was i stood up",
+    author: "Montrith"
+  },
+  {
+    query: "why ca",
+    right: "why can't i poop",
+    author: "!paradigm!"
+  },
+  {
+    query: "where can i find p",
+    right: "where can i find peppermint oil",
+    author: "Montrith"
+  },
+  {
+    query: "why am i so",
+    right: "why am i so tired",
     author: "Montrith"
   },
   {
