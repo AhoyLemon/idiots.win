@@ -38,11 +38,13 @@ function pullResults() {
     "q":myQuery, // query term
     "client":"youtube" // force youtube style response, i.e. jsonp
   });
+  answers = [];
   suggestCallBack = function (data) {
+    var n = 0;
     $.each(data[1], function(key,value) {
-      answers.push([data[1][key][0], key]);
-      if (data[1][key][0] == myQuery) {
-        answers.splice(key,1);
+      if (data[1][key][0] != myQuery) {
+        answers.push([data[1][key][0], n]);
+        n++;
       }
     });
     if (answers.length > 5) {
