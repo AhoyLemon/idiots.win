@@ -52,6 +52,7 @@ function pullResults() {
     }
     shuffle(answers);
     console.log(answers);
+    $('#Results').empty();
     $.each(answers, function(key,value) {
       var res = answers[key][0].split(myQuery);
       $('#Results').append('<li data-place="'+answers[key][1]+'"><b>'+myQuery+'</b>'+res[1]+'</li>');
