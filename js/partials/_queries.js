@@ -347,6 +347,41 @@ var rounds = [
     author: "Montrith"
   },
   {
+    query: "help i",
+    right: "help in spanish",
+    author: "!paradigm!"
+  },
+  {
+    query: "is it wrong",
+    right: "is it wrong to sleep with your sister",
+    author: "!paradigm!"
+  },
+  {
+    query: "i accidentally ate",
+    right: "i accidentally ate gluten",
+    author: "Lemon"
+  },
+  {
+    query: "help i am a",
+    right: "help i am alive",
+    author: "!paradigm!"
+  },
+  {
+    query: "help i p",
+    right: "help i pooped my pants",
+    author: "!paradigm!"
+  },
+  {
+    query: "where can i find s",
+    right: "where can i find shopkins",
+    author: "Montrith"
+  },
+  {
+    query: "where can i find a",
+    right: "where can i find a notary",
+    author: "Montrith"
+  },
+  {
     query: "is google",
     right: "is google making us stupid",
     author: "Montrith"
