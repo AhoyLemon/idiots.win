@@ -382,6 +382,16 @@ var rounds = [
     author: "Montrith"
   },
   {
+    query: "why are white",
+    right: "why are white lighters bad luck",
+    author: "Lemon"
+  },
+  {
+    query: "is it racist to",
+    right: "is it racist tosh",
+    author: "Lemon"
+  },
+  {
     query: "is google",
     right: "is google making us stupid",
     author: "Montrith"
