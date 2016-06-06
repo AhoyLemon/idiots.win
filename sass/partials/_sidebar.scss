@@ -11,7 +11,7 @@
   &.visible { transform:translateX(0); }
 }
 
-.homescreen-help-holder {  background:$yellow; color:$black; z-index:$z-homescreenbox; display: none;  
+.homescreen-help-holder {  background:$yellow; color:$black; z-index:$z-homescreenbox; display: none;
   &.android { @include position(fixed,0,0); max-width: 16em;
     .ios, .edge, .opera, .desktop-chrome { display: none; }
     b { display: block; }
@@ -34,9 +34,11 @@
   &.desktop-chrome { @include position(fixed,0,0); max-width: 16em;
     .ios, .android, .edge, .opera { display: none; }
   }
-  .homescreen-help { text-align: right; padding-right: 0.5em; padding-bottom: 1em; padding-left: 1em; }  
-  span.arrow { font-size:3.2em; }
-  .button { color:$black; border:2px solid $black; padding:.25em 1em; cursor: pointer; display: inline-block;
+  .homescreen-help { text-align: right; padding:0.5em 0.5em 1em 1em; }  
+  span.arrow {
+    svg { height: 1em; width: 1em; }
+  }
+  .button { color:$black; border:2px solid $black; padding:.25em 1em; cursor: pointer; display: inline-block; margin-top:0.5em; margin-bottom:0.5em;
     &:hover { color:$yellow; background:$black; border-color: $yellow; }
   }
 }

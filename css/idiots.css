@@ -716,13 +716,12 @@ header .hamburger.is-active .open {
 
 .homescreen-help-holder .homescreen-help {
   text-align: right;
-  padding-right: 0.5em;
-  padding-bottom: 1em;
-  padding-left: 1em;
+  padding: 0.5em 0.5em 1em 1em;
 }
 
-.homescreen-help-holder span.arrow {
-  font-size: 3.2em;
+.homescreen-help-holder span.arrow svg {
+  height: 1em;
+  width: 1em;
 }
 
 .homescreen-help-holder .button {
@@ -731,6 +730,8 @@ header .hamburger.is-active .open {
   padding: .25em 1em;
   cursor: pointer;
   display: inline-block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .homescreen-help-holder .button:hover {
