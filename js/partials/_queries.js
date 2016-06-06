@@ -392,6 +392,21 @@ var rounds = [
     author: "Lemon"
   },
   {
+    query: "can i sl",
+    right: "can i sleep in my car",
+    author: "!paradigm!"
+  },
+  {
+    query: "is the q",
+    right: "is the quesalupa good",
+    author: "!paradigm!"
+  },
+  {
+    query: "killed by o",
+    right: "killed by orca",
+    author: "!paradigm!"
+  },
+  {
     query: "is google",
     right: "is google making us stupid",
     author: "Montrith"
