@@ -83,3 +83,7 @@ $('button.hamburger').click(function() {
 $('#HomescreenLink').click(function() {
   $('#HomescreenHolder').show();
 });
+
+$('#CloseHomeScreenHelp').click(function() {
+  $('#HomescreenHolder').hide();
+});
