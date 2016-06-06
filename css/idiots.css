@@ -622,3 +622,125 @@ header .hamburger.is-active .open {
 .sidebar.visible {
   transform: translateX(0);
 }
+
+.homescreen-help-holder {
+  background: #e5e972;
+  color: #313131;
+  z-index: 6;
+  display: none;
+}
+
+.homescreen-help-holder.android {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 16em;
+}
+
+.homescreen-help-holder.android .ios, .homescreen-help-holder.android .edge, .homescreen-help-holder.android .opera, .homescreen-help-holder.android .desktop-chrome {
+  display: none;
+}
+
+.homescreen-help-holder.android b {
+  display: block;
+}
+
+.homescreen-help-holder.android .tap-that-icon {
+  margin-top: -1.2em;
+}
+
+.homescreen-help-holder.android .bottom-center-icon {
+  display: none;
+}
+
+.homescreen-help-holder.ios {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.homescreen-help-holder.ios .homescreen-help {
+  text-align: center;
+}
+
+.homescreen-help-holder.ios .android, .homescreen-help-holder.ios .edge, .homescreen-help-holder.ios .opera, .homescreen-help-holder.ios .desktop-chrome {
+  display: none;
+}
+
+.homescreen-help-holder.ios span.arrow {
+  display: block;
+  text-align: center;
+}
+
+.homescreen-help-holder.ios .top-right-icon {
+  display: none;
+}
+
+.homescreen-help-holder.edge {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 16em;
+}
+
+.homescreen-help-holder.edge .ios, .homescreen-help-holder.edge .android, .homescreen-help-holder.edge .opera, .homescreen-help-holder.edge .desktop-chrome {
+  display: none;
+}
+
+.homescreen-help-holder.opera {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 16em;
+}
+
+.homescreen-help-holder.opera .top-right-icon {
+  padding-right: 2.1em;
+}
+
+.homescreen-help-holder.opera .ios, .homescreen-help-holder.opera .android, .homescreen-help-holder.opera .edge, .homescreen-help-holder.opera .desktop-chrome {
+  display: none;
+}
+
+.homescreen-help-holder.desktop-chrome {
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 16em;
+}
+
+.homescreen-help-holder.desktop-chrome .ios, .homescreen-help-holder.desktop-chrome .android, .homescreen-help-holder.desktop-chrome .edge, .homescreen-help-holder.desktop-chrome .opera {
+  display: none;
+}
+
+.homescreen-help-holder .homescreen-help {
+  text-align: right;
+  padding-right: 0.5em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+}
+
+.homescreen-help-holder span.arrow {
+  font-size: 3.2em;
+}
+
+.homescreen-help-holder .button {
+  color: #313131;
+  border: 2px solid #313131;
+  padding: .25em 1em;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.homescreen-help-holder .button:hover {
+  color: #e5e972;
+  background: #313131;
+  border-color: #e5e972;
+}
+
+@media all and (display-mode: standalone) {
+  #AddToHomeScreen {
+    display: none;
+  }
+}

@@ -120,3 +120,26 @@ function newRound(customQuery) {
   type();
   console.log(player);
 }
+
+function addToHomeScreen(device,browser) {
+  if (device == "android") {
+    $('#HomescreenLink').text('add to home screen');
+    $('#HomescreenLink, #HomescreenHolder').addClass('android').addClass(browser);
+  } else if (device == "ios") {
+    $('#HomescreenLink').text('add to home screen');
+    $('#HomescreenLink, #HomescreenHolder').addClass('ios safari');
+  } else if (browser == "edge" || browser == "ie") {  
+    $('#HomescreenLink').text('pin to start');
+    $('#HomescreenLink, #HomescreenHolder').addClass('windows edge');
+  } else if (browser == "opera") {
+    $('#HomescreenLink').text('add to favorites');
+    $('#HomescreenLink, #HomescreenHolder').addClass('windows opera');
+  } else if (browser == "chrome") {
+    $('#HomescreenLink').text('add to desktop');
+    $('#HomescreenLink, #HomescreenHolder').addClass('desktop-chrome');
+  } else if (browser == "firefox") {
+    $('#AddToHomeScreen').html('<span class="label">bookmark idiots.win</span><span class="indent">Control+D</span>');
+  } else {
+    $('#AddToHomeScreen').remove();
+  }
+}

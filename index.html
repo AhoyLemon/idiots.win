@@ -5,7 +5,7 @@
     <title>idiots win</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:400,300,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/idiots.css?v=06.05.2016">
+    <link rel="stylesheet" href="css/idiots.css?v=06.06.2016">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Get overwhelmed by the internet's collective consciousness as you guess the first thing that comes up in Google's autocomplete.">
     <!-- favicons-->
@@ -75,7 +75,18 @@
         <li> <span class="label">Current round count</span><span class="indent"><span id="RoundCount" class="number-of-rounds"></span></span></li>
         <li> <span class="label">You could look at the</span><span class="indent"><a href="https://github.com/AhoyLemon/idiots/tree/gh-pages#the-google-autocomplete-guessing-game" target="blank" onclick="sendGA('outside link', 'https://github.com/AhoyLemon/idiots')">GitHub documentation</a></span></li>
         <li><span class="label">Or you could play</span><span class="indent"><a href="http://damn.dog" target="blank" onclick="sendGA('outside link', 'http://damn.dog')">damn.dog</a></span></li>
+        <li id="AddToHomeScreen"><span class="label">but you should probably</span><span class="indent"> <a style="font-weight:bold;" id="HomescreenLink"></a><b>.</b></span></li>
       </ul>
+    </div>
+    <div id="HomescreenHolder" class="homescreen-help-holder helper-holder">
+      <div class="homescreen-help">
+        <div class="tap-that-icon top-right-icon">Tap that <span class="opera">heart </span>icon <span class="arrow">↑</span></div>
+        <p class="ios">Tap the icon below, then choose <b>Add To Home Screen </b>from the menu that appears.</p>
+        <p class="android">Then choose<b>Add to Home screen</b> from the menu that appears.</p>
+        <p class="edge">Then choose <b>Pin this page to start</b> from the menu that appears.</p>
+        <p class="desktop-chrome">Then choose <b>More Tools</b> and then <b>Add To Desktop</b></p><a id="CloseHomeScreenHelp" class="button close-homescreen-help">Okay, did it.</a>
+        <div class="tap-that-icon ios bottom-center-icon"><span class="arrow">↓</span></div>
+      </div>
     </div>
     <main>
       <div class="child">
