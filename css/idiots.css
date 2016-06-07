@@ -749,3 +749,100 @@ header .hamburger.is-active .open {
     display: none;
   }
 }
+
+.game-over {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(49, 49, 49, 0.85);
+  color: rgba(238, 238, 238, 0.85);
+  display: none;
+}
+
+.game-over .stripes {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-wrap: center;
+  -moz-flex-wrap: center;
+  flex-wrap: center;
+  -webkit-box-align: strech;
+  -ms-flex-align: strech;
+  align-items: strech;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.game-over h2 {
+  font-size: 14vw;
+  text-align: center;
+}
+
+.game-over .boxes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: strech;
+  -ms-flex-align: strech;
+  align-items: strech;
+  justify-content: space-around;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.game-over .box span {
+  display: block;
+  text-align: center;
+}
+
+.game-over .box span.perfect {
+  color: #52d88e;
+}
+
+.game-over .box span.great {
+  color: #1eaefc;
+}
+
+.game-over .box span.okay {
+  color: #ca62f0;
+}
+
+.game-over .box span.bad {
+  color: #ecb528;
+}
+
+.game-over .box span.failure {
+  color: #ee2c2c;
+}
+
+.game-over .box .label {
+  font-weight: 600;
+}
+
+.game-over .box .big {
+  font-size: 5em;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.game-over .box sup {
+  font-size: 0.5em;
+}

@@ -1,4 +1,5 @@
 // jshint -W117
+// jshint -W098
 
 var rounds = [
   {
@@ -406,6 +407,218 @@ var rounds = [
     right: "killed by orca",
     author: "!paradigm!"
   },
+  {
+    query: "is god a",
+    right: "killed by orca",
+    author: "Jackal Flapnasty"
+  },
+  {
+    query: "is everyone",
+    right: "is everyone singular or plural",
+    author: "Lemon"
+  },
+  {
+    query: "can i marry",
+    right: "can i marry myself",
+    author: "Lemon"
+  },
+  {
+    query: "is a tattoo",
+    right: "is a tattoo supposed to scab",
+    author: "Montrith"
+  },
+  {
+    query: "why are vegans",
+    right: "why are vegans so skinny",
+    author: "Montrith"
+  },
+  {
+    query: "is hell",
+    right: "is hell real",
+    author: "Montrith"
+  },
+  {
+    query: "are feet ",
+    right: "are feet shoes",
+    author: "Montrith"
+  },
+  {
+    query: "are there laws",
+    right: "are there laws in space",
+    author: "Montrith"
+  },
+  {
+    query: "what's he",
+    right: "what's her name",
+    author: "Montrith"
+  },
+  {
+    query: "are teeth",
+    right: "are teeth bones",
+    author: "Montrith"
+  },
+  {
+    query: "why liberals",
+    right: "why liberals are stupid",
+    author: "Lemon"
+  },
+  {
+    query: "genital",
+    right: "genital herpes",
+    author: "Montrith"
+  },
+  {
+    query: "how can i avoid",
+    right: "how can i avoid paying taxes",
+    author: "Montrith"
+  },
+  {
+    query: "are gamers",
+    right: "are gamers smarter",
+    author: "Montrith"
+  },
+  {
+    query: "are gamers",
+    right: "are gamers smarter",
+    author: "Montrith"
+  },
+  {
+    query: "erection when",
+    right: "erection when sleep",
+    author: "Lemon"
+  },
+  {
+    query: "is britain",
+    right: "is britain a country",
+    author: "Montrith"
+  },
+  {
+    query: "is king",
+    right: "is kingroot safe",
+    author: "Montrith"
+  },
+  {
+    query: "is big",
+    right: "is bigfoot real",
+    author: "Montrith"
+  },
+  {
+    query: "how should a guy",
+    right: "how should a guy treat his girlfriend",
+    author: "Montrith"
+  },
+  {
+    query: "how can i get dr",
+    right: "how can i get driving directions",
+    author: "Montrith"
+  },
+  {
+    query: "are all the",
+    right: "are all the beatles dead",
+    author: "Montrith"
+  },
+  {
+    query: "what do girls",
+    right: "what do girls like",
+    author: "Montrith"
+  },
+  {
+    query: "are rocks",
+    right: "are rocks alive",
+    author: "Montrith"
+  },
+  {
+    query: "are people",
+    right: "are people born gay",
+    author: "Montrith"
+  },
+  {
+    query: "how to attract",
+    right: "how to attract women",
+    author: "Montrith"
+  },
+  {
+    query: "semen in",
+    right: "semen in starbucks",
+    author: "Montrith"
+  },
+  {
+    query: "how to secre",
+    right: "how to secretly screenshot snapchat iphone",
+    author: "Montrith"
+  },
+  {
+    query: "can i legally",
+    right: "can i legally change my name",
+    author: "Montrith"
+  },
+  {
+    query: "can i sell",
+    right: "can i sell my eggs",
+    author: "Montrith"
+  },
+  {
+    query: "is it possible to",
+    right: "is it possible to be allergic to water",
+    author: "Montrith"
+  },
+  {
+    query: "can i sell",
+    right: "can i sell my eggs",
+    author: "Montrith"
+  },
+  {
+    query: "is it gay",
+    right: "is it gay to watch magic mike",
+    author: "Lemon"
+  },
+  {
+    query: "was god",
+    right: "was god on vacation",
+    author: "Montrith"
+  },
+  {
+    query: "can i pierce",
+    right: "can i pierce my own ear",
+    author: "Montrith"
+  },
+  {
+    query: "can i shoot",
+    right: "can i shoot down a drone",
+    author: "Montrith"
+  },
+  {
+    query: "can i shoot",
+    right: "can i shoot down a drone",
+    author: "Montrith"
+  },
+  {
+    query: "would i die if ",
+    right: "would i die if i drink bleach",
+    author: "Montrith"
+  },
+  {
+    query: "is it poisonous",
+    right: "is it poisonous to eat apple seeds",
+    author: "Montrith"
+  },
+  {
+    query: "is it poisonous",
+    right: "is it poisonous to eat apple seeds",
+    author: "Montrith"
+  },
+  {
+    query: "how to lie to",
+    right: "how to lie to your parents",
+    author: "Montrith"
+  },
+  {
+    query: "is it gay",
+    right: "is it gay to watch magic mike",
+    author: "Lemon"
+  },
+  
+  
   {
     query: "is google",
     right: "is google making us stupid",

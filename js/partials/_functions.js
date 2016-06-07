@@ -1,4 +1,5 @@
 // jshint -W117
+// jshint -W098
 
 function shuffle(o) {
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -71,34 +72,96 @@ function pullResults() {
   };
 }
 
+function grabPlayerScores() {
+  if(typeof(Storage) !== "undefined") {
+
+    if (localStorage.roundsPlayed === undefined || localStorage.roundsPlayed === null) {
+      localStorage.setItem('roundsPlayed', '');
+    } else {
+      if (localStorage.playerPlayed) {
+        player.played = localStorage.playerPlayed.split(',');
+        if (player.played[0] === "") {
+          player.played.splice(0,1);
+        }
+      }
+      //roundsPlayed = localStorage.roundsPlayed.split(',');
+      //for(var i=0; i<roundsPlayed.length; i++) { roundsPlayed[i] = parseInt(roundsPlayed[i], 10); }
+      if (localStorage.playerRounds > 0) {
+        player.rounds = parseInt(localStorage.playerRounds);
+      }
+      if (localStorage.playerScore > 0) {
+        player.score = parseInt(localStorage.playerScore);
+      }
+      if (localStorage.playerPerfect > 0) {
+        player.perfect = parseInt(localStorage.playerPerfect);
+        $('#NumberPerfect').text(player.perfect);
+        $('#PerfectBox').removeClass('zero');
+      }
+      if (localStorage.playerGreat > 0) {
+        player.great = parseInt(localStorage.playerGreat);
+        $('#NumberGreat').text(player.great);
+        $('#GreatBox').removeClass('zero');
+      }
+      if (localStorage.playerOkay > 0) {
+        player.okay = parseInt(localStorage.playerOkay);
+        $('#NumberOkay').text(player.okay);
+        $('#OkayBox').removeClass('zero');
+      }
+      if (localStorage.playerBad > 0) {
+        player.bad = parseInt(localStorage.playerBad);
+        $('#NumberBad').text(player.bad);
+        $('#BadBox').removeClass('zero');
+      }
+      if (localStorage.playerFailure > 0) {
+        player.failure = parseInt(localStorage.playerFailure);
+        $('#NumberFailure').text(player.failure);
+        $('#FailureBox').removeClass('zero');
+      }
+      //showScore();
+    }
+
+  } else {
+    // Sorry! No Web Storage support..
+  }
+}
+
 function correctAnswer() {
   if (round.guesses == 1) {
     player.perfect++;
     $('#PerfectBox').removeClass('zero');
     $('#NumberPerfect').text(player.perfect);
     player.score = player.score + 4;
+    localStorage.playerPerfect = player.perfect;
   } else if (round.guesses == 2) {
     player.great++;
     $('#NumberGreat').text(player.great);
     $('#GreatBox').removeClass('zero');
     player.score = player.score + 3;
+    localStorage.playerGreat = player.great;
   } else if (round.guesses == 3) {
     player.okay++;
     $('#NumberOkay').text(player.okay);
     $('#OkayBox').removeClass('zero');
     player.score = player.score + 2;
+    localStorage.playerOkay = player.okay;
   } else if (round.guesses == 4) {
     player.bad++;
     $('#NumberBad').text(player.bad);
     $('#BadBox').removeClass('zero');
     player.score = player.score + 1;
+    localStorage.playerBad = player.bad;
   } else if (round.guesses == 5) {
     player.failure++;
     $('#NumberFailure').text(player.failure);
     $('#FailureBox').removeClass('zero');
+    localStorage.playerFailure = player.failure;
   }
-  //$('#NumberScore').text(player.score);
+  player.rounds++;
+  localStorage.playerScore = player.score;
+  localStorage.playerRounds = player.rounds;
   $('#ScoreBox').removeClass('zero');
+  player.played.push(myQuery);
+  localStorage.playerPlayed = player.played.toString();
   var guessReadout;
   if (round.guesses == 1) {
     guessReadout = "first try";
@@ -120,7 +183,7 @@ function newRound(customQuery) {
       if (reRoll < 8) {
         newRound();
       } else {
-        alert("game over.\nYou've played all the rounds I've got. Check back, I'll add more soon.");
+        gameOver();
       }
     } else {
       myQuery = rounds[r].query;
@@ -153,4 +216,53 @@ function addToHomeScreen(device,browser) {
   } else {
     $('#AddToHomeScreen').remove();
   }
+}
+
+function gameOver(n) {
+  $('#GameOverRoundsPlayed').text(player.rounds);
+  var bestPossibleScore = (player.rounds * 4);
+  var scorePercent = parseInt((player.score / bestPossibleScore) * 100);
+  if (n) {
+    scorePercent = n;
+  }
+  var finalRating = "";
+  var scoreEmoji = "";
+  $('#GameOverScore').text(scorePercent).append('<sup class="pct">%</sup>');
+  if (scorePercent < 20) {
+    finalRating = "failure";
+    scoreEmoji = "";
+  } else if (scorePercent < 40) {
+    finalRating = "bad";
+  } else if (scorePercent < 60) {
+    finalRating = "okay";
+  } else if (scorePercent < 80) {
+    finalRating = "great";
+  } else if (scorePercent < 101) {
+    finalRating = "perfect";
+  }
+  if (scorePercent < 10) {
+    scoreEmoji = "👵";
+  } else if (scorePercent < 20) {
+    scoreEmoji = "💩";
+  } else if (scorePercent < 30) {
+    scoreEmoji = "👾";
+  } else if (scorePercent < 40) {
+    scoreEmoji = "👺";
+  } else if (scorePercent < 50) {
+    scoreEmoji = "🙈";
+  } else if (scorePercent < 60) {
+    scoreEmoji = "😵";
+  } else if (scorePercent < 70) {
+    scoreEmoji = "🐅";
+  } else if (scorePercent < 80) {
+    scoreEmoji = "😻";
+  } else if (scorePercent < 90) {
+    scoreEmoji = "🍻";
+  } else if (scorePercent < 101) {
+    scoreEmoji = "💎";
+  } else {
+    scoreEmoji = "🐛";
+  }
+  $('#GameOverRating').html(scoreEmoji).removeClass('failure bad okay great perfect').addClass(finalRating);
+  $('#GameOver').fadeIn();
 }

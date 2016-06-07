@@ -55,6 +55,8 @@ $(document).ready(function() {
   console.log('device: '+device+'. browser:'+browser);
   addToHomeScreen(device,browser);
   
+  grabPlayerScores();
+  
 });
 
 $('#Results').on('click', 'li', function() {
