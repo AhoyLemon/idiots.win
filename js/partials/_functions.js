@@ -39,17 +39,24 @@ function pullResults() {
     "client":"youtube" // force youtube style response, i.e. jsonp
   });
   answers = [];
+  var correctAnswer = "";
   suggestCallBack = function (data) {
     var n = 0;
     $.each(data[1], function(key,value) {
       if (data[1][key][0] != myQuery) {
-        answers.push([data[1][key][0], n]);
+        if (n === 0) {
+          correctAnswer = data[1][key][0];
+        } else {
+         answers.push([data[1][key][0], n]);
+        }
         n++;
       }
     });
-    if (answers.length > 5) {
-      answers.length = 5;
+    shuffle(answers);
+    if (answers.length > 4) {
+      answers.length = 4;
     }
+    answers.push([correctAnswer, 0]);
     shuffle(answers);
     console.log(answers);
     $('#Results').empty();
