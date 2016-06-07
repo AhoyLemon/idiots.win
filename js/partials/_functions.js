@@ -62,7 +62,11 @@ function pullResults() {
     $('#Results').empty();
     $.each(answers, function(key,value) {
       var res = answers[key][0].split(myQuery);
-      $('#Results').append('<li data-place="'+answers[key][1]+'"><b>'+myQuery+'</b>'+res[1]+'</li>');
+      if (res[1]) {
+        $('#Results').append('<li data-place="'+answers[key][1]+'"><b>'+myQuery+'</b>'+res[1]+'</li>');
+      } else {
+        $('#Results').append('<li data-place="'+answers[key][1]+'">'+answers[key][0]+'</li>');
+      }
     });
   };
 }
