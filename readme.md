@@ -2,7 +2,7 @@
 ####(The Google Autocomplete Guessing Game)
 
 ### What is this?
-idiots win turns Google autocomplete function into a guessing game. Each new round, the game takes the five top autocompletes for a given query, randomizes them, and invites you to guess which one was meant to come first in the results.
+idiots win turns Google's autocomplete algorithm into a guessing game. Each new round, the game takes all the possible autocompletes for a single query, randomizes them, and invites you to guess which one was meant to come first in the results.
 
 ### Tell me more about this autocomplete query.
 It is decidedly *not* officially supported by Google. The site does a json request out to suggestqueries.google.com and comes back with the results. It works for now, I have no idea if it will continue to work in the future.
