@@ -653,6 +653,10 @@ header .hamburger.is-active .open {
   display: none;
 }
 
+.homescreen-help-holder.android.firefox {
+  padding-top: 1em;
+}
+
 .homescreen-help-holder.ios {
   position: fixed;
   right: 0;
