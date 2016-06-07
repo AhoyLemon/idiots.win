@@ -83,9 +83,12 @@ function grabPlayerScores() {
         if (player.played[0] === "") {
           player.played.splice(0,1);
         }
+        var uniqueNames = [];
+        $.each(player.played, function(i, el){
+          if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+        });
+        player.played = uniqueNames;
       }
-      //roundsPlayed = localStorage.roundsPlayed.split(',');
-      //for(var i=0; i<roundsPlayed.length; i++) { roundsPlayed[i] = parseInt(roundsPlayed[i], 10); }
       if (localStorage.playerRounds > 0) {
         player.rounds = parseInt(localStorage.playerRounds);
       }
