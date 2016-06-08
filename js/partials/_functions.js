@@ -75,8 +75,8 @@ function pullResults() {
 function grabPlayerScores() {
   if(typeof(Storage) !== "undefined") {
 
-    if (localStorage.roundsPlayed === undefined || localStorage.roundsPlayed === null) {
-      localStorage.setItem('roundsPlayed', '');
+    if (localStorage.playerPlayed === undefined || localStorage.playerPlayed === null) {
+      localStorage.setItem('playerPlayed','');
     } else {
       if (localStorage.playerPlayed) {
         player.played = localStorage.playerPlayed.split(',');
@@ -120,9 +120,7 @@ function grabPlayerScores() {
         $('#NumberFailure').text(player.failure);
         $('#FailureBox').removeClass('zero');
       }
-      //showScore();
     }
-
   } else {
     // Sorry! No Web Storage support..
   }
@@ -268,4 +266,14 @@ function gameOver(n) {
   }
   $('#GameOverRating').html(scoreEmoji).removeClass('failure bad okay great perfect').addClass(finalRating);
   $('#GameOver').fadeIn();
+  
+  localStorage.removeItem("playerRounds");
+  localStorage.removeItem("playerScore");
+  localStorage.removeItem("playerPlayed");
+  
+  localStorage.removeItem("playerPerfect");
+  localStorage.removeItem("playerGreat");
+  localStorage.removeItem("playerOkay");
+  localStorage.removeItem("playerBad");
+  localStorage.removeItem("playerFailure");
 }
