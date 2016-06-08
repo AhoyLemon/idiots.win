@@ -68,11 +68,6 @@ var rounds = [
     author: "Montrith"
   },
   {
-    query: "can your",
-    right: "can your pet",
-    author: "Montrith"
-  },
-  {
     query: "have we ever",
     right: "have we ever had a jewish president",
     author: "Montrith"
