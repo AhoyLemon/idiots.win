@@ -19,7 +19,7 @@ Also, Google's autocomplete is constantly changing and based on regional informa
 Sure. Either get a hold of Lemon to get access to the master spreadsheet, or submit a pull request.
 
 ### Do you take pull requests?
-[Absolutely](https://github.com/AhoyLemon/idiots/pull/new/gh-pages).
+[Absolutely](https://github.com/AhoyLemon/idiots/fork).
 
 ### What's this written in?
 * [Jade](http://jade-lang.com/)
