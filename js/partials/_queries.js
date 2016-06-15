@@ -612,6 +612,26 @@ var rounds = [
     right: "is it gay to watch magic mike",
     author: "Lemon"
   },
+  {
+    query: "hacked into",
+    right: "hacked into kfc",
+    author: "!paradigm!"
+  },
+  {
+    query: "is the gov",
+    right: "is the government hiding aliens",
+    author: "!paradigm!"
+  },
+  {
+    query: "is the gov",
+    right: "is the government hiding aliens",
+    author: "!paradigm!"
+  },
+  {
+    query: "my mind is be",
+    right: "my mind is being controlled",
+    author: "!paradigm!"
+  },
   
   
   {
