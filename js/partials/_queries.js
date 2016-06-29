@@ -632,8 +632,71 @@ var rounds = [
     right: "my mind is being controlled",
     author: "!paradigm!"
   },
-  
-  
+  {
+    query: "kinds of u",
+    right: "kinds of ukuleles",
+    author: "A Meat"
+  },
+  {
+    query: "best place to be",
+    right: "best place to be homeless",
+    author: "A Meat"
+  },
+  {
+    query: "anime where a",
+    right: "anime where a girl becomes a god",
+    author: "A Meat"
+  },
+  {
+    query: "how to stop being",
+    right: "how to stop being high",
+    author: "A Meat"
+  },
+  {
+    query: "how do I email",
+    right: "how do i email donald trump",
+    author: "Boots Raingear"
+  },
+  {
+    query: "why are my b",
+    right: "why are my boobs sore",
+    author: "Boots Raingear"
+  },
+  {
+    query: "who knows when",
+    right: "who knows when the world will end",
+    author: "Boots Raingear"
+  },
+  {
+    query: "my uncle is",
+    right: "my uncle is the best",
+    author: "Boots Raingear"
+  },
+  {
+    query: "my daughter takes",
+    right: "my daughter takes me for granted",
+    author: "Boots Raingear"
+  },
+  {
+    query: "was slavery",
+    right: "was slavery the cause of the civil war",
+    author: "Boots Raingear"
+  },
+  {
+     query: "can my sister",
+     right: "can my sister adopt me",
+    author: "Boots Raingear"
+  },
+  {
+     query: "did jesus like",
+     right: "did jesus like animals",
+    author: "Boots Raingear"
+  },
+  {
+     query: "did bigfoot",
+     right: "did bigfoot die",
+    author: "Boots Raingear"
+  },
   {
     query: "is google",
     right: "is google making us stupid",
