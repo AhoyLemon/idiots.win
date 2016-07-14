@@ -53,7 +53,6 @@ function pullResults() {
         n++;
       }
     });
-    answers.shift();
     shuffle(answers);
     if (answers.length > 4) {
       answers.length = 4;
