@@ -3,7 +3,7 @@
 $(document).ready(function() {
   roundCount = rounds.length + 1;
   $('#RoundCount').text(roundCount);
-  if (window.location.search) {
+  if (window.location.search && !window.location.search.includes('=')) {
     var q = window.location.search.substring(1);
     var qd = decodeURIComponent(q);
     setTimeout(function(){ 
