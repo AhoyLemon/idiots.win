@@ -583,11 +583,6 @@ var rounds = [
     author: "Montrith"
   },
   {
-    query: "can i shoot",
-    right: "can i shoot down a drone",
-    author: "Montrith"
-  },
-  {
     query: "would i die if ",
     right: "would i die if i drink bleach",
     author: "Montrith"
@@ -632,8 +627,16 @@ var rounds = [
     right: "my mind is being controlled",
     author: "!paradigm!"
   },
-  
-  
+  {
+    query: "my boyfriend can",
+    right: "my boyfriend cant get me off",
+    author: "Lemon"
+  },
+  {
+    query: "who is famous",
+    right: "who is famous dave",
+    author: "Lemon"
+  },
   {
     query: "is google",
     right: "is google making us stupid",
