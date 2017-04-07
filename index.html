@@ -5,10 +5,9 @@
     <title>idiots.win</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:400,300,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/idiots.css?v=2016-07-17@10:28:23">
+    <link rel="stylesheet" href="css/idiots.css?v=2017-03-07@15:31:58">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Get overwhelmed by the internet's collective consciousness as you guess the first thing that comes up in Google's autocomplete.">
-    <!-- favicons-->
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
@@ -29,8 +28,6 @@
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#313131">
-    <!--social-->
-    <!-- Twitter-->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:creator" content="@AhoyLemon">
     <meta name="twitter:site" content="@AhoyLemon">
@@ -38,7 +35,6 @@
     <meta name="twitter:description" content="Get overwhelmed by the internet's collective consciousness as you guess the first thing that comes up in Google's autocomplete.">
     <meta name="twitter:image" content="http://idiots.win/img/twitter-card.png">
     <meta name="twitter:url" content="http://idiots.win">
-    <!-- OpenGraph-->
     <meta property="og:title" content="idiots.win">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://idiots.win">
@@ -49,18 +45,18 @@
   <body>
     <header id="ScoreHeader">
       <div class="inner score-holder">
-        <div id="PerfectBox" class="box zero"><span class="perfect label">perfect</span><span id="NumberPerfect" class="perfect number">0</span></div>
-        <div id="GreatBox" class="box zero"><span class="great label">great</span><span id="NumberGreat" class="great number">0</span></div>
-        <div id="OkayBox" class="box zero"><span class="okay label">okay</span><span id="NumberOkay" class="okay number">0</span></div>
-        <div id="BadBox" class="box zero"><span class="bad label">bad</span><span id="NumberBad" class="bad number">0</span></div>
-        <div id="FailureBox" class="box zero"><span class="failure label">failure</span><span id="NumberFailure" class="failure number">0</span></div>
+        <div class="box zero" id="PerfectBox"><span class="perfect label">perfect</span><span class="perfect number" id="NumberPerfect">0</span></div>
+        <div class="box zero" id="GreatBox"><span class="great label">great</span><span class="great number" id="NumberGreat">0</span></div>
+        <div class="box zero" id="OkayBox"><span class="okay label">okay</span><span class="okay number" id="NumberOkay">0</span></div>
+        <div class="box zero" id="BadBox"><span class="bad label">bad</span><span class="bad number" id="NumberBad">0</span></div>
+        <div class="box zero" id="FailureBox"><span class="failure label">failure</span><span class="failure number" id="NumberFailure">0</span></div>
         <div class="hamburger-holder">
           <button class="hamburger">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-              <g id="HamburgerOpen" class="open">
+              <g class="open" id="HamburgerOpen">
                 <path d="M28.8 6.9H3.2c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h25.6c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5zM28.8 17.5H3.2c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5h25.6c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5zM28.8 28H3.2c-.8 0-1.5-.7-1.5-1.5S2.4 25 3.2 25h25.6c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5z"></path>
               </g>
-              <g id="HamburgerClose" class="close">
+              <g class="close" id="HamburgerClose">
                 <path d="M29.7 25.4L18.3 16l11.3-9.5c.6-.5.7-1.5.2-2.1-.5-.6-1.5-.7-2.1-.2L16 14 4.1 4.2c-.6-.5-1.5-.4-2.1.2-.5.7-.4 1.6.2 2.1L13.6 16 2.3 25.5c-.6.5-.7 1.5-.2 2.1.3.4.7.5 1.1.5.3 0 .7-.1 1-.4L16 17.9l11.8 9.8c.3.2.6.3 1 .3s.9-.2 1.2-.5c.5-.6.4-1.6-.3-2.1z"></path>
               </g>
             </svg>
@@ -73,13 +69,13 @@
         <li><span class="label">Game by</span><span class="indent"><a href="http://ahoylemon.xyz" target="blank" onclick="sendGA('outside link', 'http://ahoylemon.xyz')">Lemon</a></span></li>
         <li><span class="label">with a lot of help from</span><span class="indent"><a href="https://thefpl.us/meet/montrith" target="blank" onclick="sendGA('outside link', 'https://thefpl.us/meet/montrith')">Montrith</a></span></li>
         <li><span class="label">and no involvement from</span><span class="indent">Google</span></li>
-        <li> <span class="label">Current round count</span><span class="indent"><span id="RoundCount" class="number-of-rounds"></span></span></li>
+        <li> <span class="label">Current round count</span><span class="indent"><span class="number-of-rounds" id="RoundCount"></span></span></li>
         <li> <span class="label">You could look at the</span><span class="indent"><a href="https://github.com/AhoyLemon/idiots/tree/gh-pages#the-google-autocomplete-guessing-game" target="blank" onclick="sendGA('outside link', 'https://github.com/AhoyLemon/idiots')">GitHub documentation</a></span></li>
         <li><span class="label">or you could play</span><span class="indent"><a href="http://damn.dog" target="blank" onclick="sendGA('outside link', 'http://damn.dog')">damn.dog</a></span></li>
         <li id="AddToHomeScreen"><span class="label">but you should probably</span><span class="indent"> <a style="font-weight:bold;" id="HomescreenLink"></a><b>.</b></span></li>
       </ul>
     </div>
-    <div id="HomescreenHolder" class="homescreen-help-holder helper-holder">
+    <div class="homescreen-help-holder helper-holder" id="HomescreenHolder">
       <div class="homescreen-help">
         <div class="tap-that-icon top-right-icon">Tap that <span class="opera">heart </span>icon <span class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.6 100">
@@ -88,7 +84,7 @@
         <p class="ios">Tap the icon below, then choose <b>Add To Home Screen </b>from the menu that appears.</p>
         <p class="android">Then choose<b>Add to Home screen</b> from the menu that appears.</p>
         <p class="edge">Then choose <b>Pin this page to start</b> from the menu that appears.</p>
-        <p class="desktop-chrome">Then choose <b>More Tools</b> and then <b>Add To Desktop</b></p><a id="CloseHomeScreenHelp" class="button close-homescreen-help">Okay, did it.</a>
+        <p class="desktop-chrome">Then choose <b>More Tools</b> and then <b>Add To Desktop</b></p><a class="button close-homescreen-help" id="CloseHomeScreenHelp">Okay, did it.</a>
         <div class="tap-that-icon ios bottom-center-icon"><span class="arrow">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.6 100">
               <path d="M83.6 58.3L41.8 100 0 58.3V30.7l31.8 31.7V0H52v62.2l31.6-31.5"></path>
@@ -99,20 +95,20 @@
       <div class="child">
         <div class="search-top">What is Google's top result for...</div>
         <div class="search-box">
-          <div id="FakeSearch" class="fake-input"></div>
+          <div class="fake-input" id="FakeSearch"></div>
           <ul id="Results"></ul>
         </div>
       </div>
     </main>
-    <section id="GameOver" class="game-over">
+    <section class="game-over" id="GameOver">
       <div class="stripes">
         <div class="child">
           <h2>GAME OVER</h2>
         </div>
         <div class="child boxes">
-          <div class="box"><span id="GameOverRoundsPlayed" class="big"></span><span class="label">rounds played</span></div>
-          <div class="box"><span id="GameOverScore" class="big"></span><span class="label">score</span></div>
-          <div class="box"><span id="GameOverRating" class="big"></span><span class="label">overall rating</span></div>
+          <div class="box"><span class="big" id="GameOverRoundsPlayed"></span><span class="label">rounds played</span></div>
+          <div class="box"><span class="big" id="GameOverScore"></span><span class="label">score</span></div>
+          <div class="box"><span class="big" id="GameOverRating"></span><span class="label">overall rating</span></div>
         </div>
       </div>
     </section>
@@ -181,7 +177,7 @@
       }
     </script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/min/idiots.min.js?v=2016-07-17@10:28:23"></script>
+    <script src="js/min/idiots.min.js?v=2017-03-07@15:31:58"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
