@@ -23,3 +23,7 @@
 %textlink { text-decoration: none;
   &:hover { border-bottom: 0.05em solid $red; }
 }
+
+%center-child { @include flex-container(row,wrap,center);
+  > .child { flex-basis: 100%; }
+}

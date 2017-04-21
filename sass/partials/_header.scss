@@ -17,12 +17,17 @@ header { @include position(fixed,0,0,null,0); padding-top:0.25em; padding-bottom
     }
   }
   
-  .hamburger-holder { @include position(absolute,0.8rem,1rem); }
-  .hamburger { background:transparent; border:none; cursor: pointer; color:$blue; outline:none; height: 2.25rem; width: 2.25rem;
-    svg { fill:$offwhite;  }
-    g { transform-origin: center; transition:all 0.3s linear; }
-    .close { opacity: 0.2; transform: scale(0.2); }
+  .hamburger-holder { @include position(absolute,0.2rem,1rem); }
+  .hamburger { background:transparent; border:none; cursor: pointer; color:$blue; outline:none; height: 3.5rem; width: 3.5rem;
+    .fill { opacity: 0; fill:$white; }
+    .x { opacity: 0; fill:$white; }
+    .outline, .question-mark { fill:$white; opacity: 1; }
+    &:hover {
+      .fill { opacity: 1; }
+      .question-mark, .x { fill:$body; }
+    }
     &.is-active {
+      .x { opacity: 1; }
       .close { opacity: 1; transform: scale(1);}
       .open { opacity: 0.2; transform: scale(0.2);}
     }
