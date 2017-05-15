@@ -643,9 +643,9 @@ var rounds = [
     author: "Montrith"
   },
   {
-    query: "millenials are",
-    right: "millenials are the worst",
-    author: "Doug Henwood"
+    query: "millennials are killing",
+    right: "millennials are killing napkins",
+    author: "David Wolkin"
   }
 ];
 
