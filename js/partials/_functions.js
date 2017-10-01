@@ -33,7 +33,7 @@ function erase() {
 }
 
 function pullResults() {
-  $.getJSON("http://suggestqueries.google.com/complete/search?callback=?", { 
+  $.getJSON("https://suggestqueries.google.com/complete/search?callback=?", { 
     "hl":"en", // Language                  
     "jsonp":"suggestCallBack", // jsonp callback function name
     "q":myQuery, // query term
