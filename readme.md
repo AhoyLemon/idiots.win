@@ -1,4 +1,4 @@
-![idiots win](http://idiots.win/img/twitter-card.png)
+![idiots win](https://idiots.win/img/twitter-card.png)
 #### (The Google Autocomplete Guessing Game)
 
 ## What is this?
@@ -19,10 +19,10 @@ Also, Google's autocomplete is constantly changing and based on regional informa
 Sure. Either get a hold of Lemon to get access to the master spreadsheet, or submit a pull request.
 
 ## Do you take pull requests?
-[Absolutely](https://github.com/AhoyLemon/idiots/fork).
+[Absolutely](https://github.com/AhoyLemon/idiots.win/fork).
 
 ## What's this written in?
 * [Pug](https://pugjs.org)
 * [Sass](http://sass-lang.com/)
 * [jQuery](http://jquery.com/)
-* The typing effect was modified from [this pen](http://codepen.io/stathisg/pen/Bkvhg/) by [Stathis](http://codepen.io/stathisg/)
+* The typing effect was modified from [this pen](https://codepen.io/stathisg/pen/Bkvhg/) by [Stathis](https://codepen.io/stathisg/)
