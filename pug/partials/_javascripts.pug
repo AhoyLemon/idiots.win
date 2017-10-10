@@ -1,5 +1,6 @@
 script(src="https://code.jquery.com/jquery-2.1.4.min.js")
 script(src="js/min/idiots.min.js?v="+lastUpdated)
+// Google Analytics
 script.
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -8,3 +9,10 @@ script.
 
   ga('create', 'UA-15129990-18', 'auto');
   ga('send', 'pageview');
+//- Track.js
+script(type="text/javascript").
+  window._trackJs = {
+    token: "9947e081831c42b8aeb3a5fb81a152c4",
+    application: "idiotsWin"
+  }
+script(type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js")
