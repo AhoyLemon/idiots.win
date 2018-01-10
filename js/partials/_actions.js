@@ -57,6 +57,14 @@ $(document).ready(function() {
   
   grabPlayerScores();
   
+  setTimeout(function(){ 
+    $('#Banner').addClass('visible');
+  }, 12500);
+  
+});
+
+$('#Banner a.close').click(function() {
+  $('#Banner').removeClass('visible');
 });
 
 $('#Results').on('click', 'li', function() {

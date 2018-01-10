@@ -586,6 +586,65 @@ header {
   #AddToHomeScreen {
     display: none; } }
 
+.banner {
+  background-color: #e4e72c;
+  width: 305px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: strech;
+  -ms-flex-align: strech;
+  align-items: strech;
+  transform: translateX(320px);
+  transition: transform 0.5s cubic-bezier(0.63, 0.49, 0.63, 1.45);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.65); }
+  .banner .icon-holder {
+    flex-basis: 76px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: auto;
+    padding: 10px;
+    color: #010101; }
+  .banner .text-holder {
+    flex-basis: calc(100% - 76px);
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: auto;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: 120%; }
+  .banner .text {
+    color: #010101;
+    text-decoration: none; }
+    .banner .text:hover {
+      text-decoration: underline; }
+  .banner .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #010101; }
+    .banner .close svg {
+      width: 18px;
+      height: 18px; }
+    .banner .close .fill {
+      opacity: 0; }
+    .banner .close:hover .x {
+      fill: #e4e72c; }
+    .banner .close:hover .fill {
+      opacity: 1; }
+  .banner.visible {
+    transform: translateX(0); }
+
 .game-over {
   position: fixed;
   top: 0;
