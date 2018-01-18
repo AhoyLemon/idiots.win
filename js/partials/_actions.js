@@ -66,7 +66,7 @@ $(document).ready(function() {
     
     
     //$('#Banner').addClass('visible');
-  }, 14000);
+  }, 19500);
   
 });
 
