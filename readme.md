@@ -18,6 +18,9 @@ Also, Google's autocomplete is constantly changing and based on regional informa
 ## Can I suggest queries?
 Sure. Either get a hold of Lemon to get access to the master spreadsheet, or submit a pull request.
 
+## Whose voice is that?
+The "by Lemon" jingle was performed and produced by [Jack Chick](https://thefpl.us/meet/jack-chick)
+
 ## Do you take pull requests?
 [Absolutely](https://github.com/AhoyLemon/idiots.win/fork).
 
