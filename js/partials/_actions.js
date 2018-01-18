@@ -58,8 +58,15 @@ $(document).ready(function() {
   grabPlayerScores();
   
   setTimeout(function(){ 
-    $('#Banner').addClass('visible');
-  }, 12500);
+    new Audio('audio/bylemon.mp3').play();
+    setTimeout(function(){ 
+      //self.bannerVisible = true;
+      $('#Banner').addClass('visible');
+    }, 800);
+    
+    
+    //$('#Banner').addClass('visible');
+  }, 14000);
   
 });
 

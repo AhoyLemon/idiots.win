@@ -1,7 +1,7 @@
 $lemonYellow: #e4e72c;
 $lemonBlack: #010101;
 
-.banner { background-color:$lemonYellow; width:305px; @include position(fixed,null,10px,10px); @include flex-container(); transform: translateX(320px); transition:transform 0.5s cubic-bezier(.63,.49,.63,1.45);
+.banner { background-color:$lemonYellow; width:305px; @include position(fixed,null,10px,10px); @include flex-container(); transform: translateX(320px); transition:all 0.5s cubic-bezier(.63,.49,.63,1.45);
   //.invisible {  }
   .icon-holder { @include flex-item(76px); padding: 10px; color:$lemonBlack; }
   .text-holder { @include flex-item(calc(100% - 76px)); padding-top:20px; padding-right: 20px; font-size:120%; }

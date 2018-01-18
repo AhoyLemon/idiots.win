@@ -605,7 +605,7 @@ header {
   -ms-flex-align: strech;
   align-items: strech;
   transform: translateX(320px);
-  transition: transform 0.5s cubic-bezier(0.63, 0.49, 0.63, 1.45);
+  transition: all 0.5s cubic-bezier(0.63, 0.49, 0.63, 1.45);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.65); }
   .banner .icon-holder {
     flex-basis: 76px;
