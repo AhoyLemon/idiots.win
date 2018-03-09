@@ -15,7 +15,7 @@ $(document).ready(function() {
   }
   
   var ua = navigator.userAgent.toLowerCase();
-  console.log(ua);
+  //console.log(ua);
   device = "";
   browser = "";
   
@@ -52,21 +52,10 @@ $(document).ready(function() {
     device = "unknown";
     browser = "chrome";
   }
-  console.log('device: '+device+'. browser:'+browser);
+  //console.log('device: '+device+'. browser:'+browser);
   addToHomeScreen(device,browser);
   
   grabPlayerScores();
-  
-  setTimeout(function(){ 
-    new Audio('audio/bylemon.mp3').play();
-    setTimeout(function(){ 
-      //self.bannerVisible = true;
-      $('#Banner').addClass('visible');
-    }, 800);
-    
-    
-    //$('#Banner').addClass('visible');
-  }, 19500);
   
 });
 

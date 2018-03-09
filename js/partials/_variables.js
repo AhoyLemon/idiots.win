@@ -10,6 +10,7 @@ var reRoll = 0;
 
 var player = {
   rounds:0,
+  roundsThisSession: -1,
   played: [],
   score:0,
   perfect:0,

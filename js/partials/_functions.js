@@ -60,7 +60,7 @@ function pullResults() {
     }
     answers.push([correctAnswer, 0]);
     shuffle(answers);
-    console.log(answers);
+    //console.log(answers);
     $('#Results').empty();
     $.each(answers, function(key,value) {
       var res = answers[key][0].split(myQuery);
@@ -194,7 +194,17 @@ function newRound(customQuery) {
   }
   $('#Results').empty();
   type();
-  console.log(player);
+  //console.log(player);
+  player.roundsThisSession++;
+  if (player.roundsThisSession == 3) {
+    
+    new Audio('audio/bylemon.mp3').play();
+    setTimeout(function(){ 
+      //self.bannerVisible = true;
+      $('#Banner').addClass('visible');
+    }, 800);
+    
+  }
 }
 
 function addToHomeScreen(device,browser) {
