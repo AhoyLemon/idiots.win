@@ -1,8 +1,11 @@
 'use strict';
 
-const PRECACHE = 'precache-v24';
+
+// Here are some variables.
+const PRECACHE = 'precache-v25';
 const RUNTIME = 'runtime';
 const offlineUrl = '/offline.html';
+
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
