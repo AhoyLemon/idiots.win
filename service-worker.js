@@ -1,6 +1,7 @@
 'use strict';
 
-const cacheName = 'v1.01';
+const cacheName = 'v1.06';
+const offlineUrl = '/offline.html';
 
 self.addEventListener('install', e => {
   // once the SW is installed, go ahead and fetch the resources
@@ -13,9 +14,24 @@ self.addEventListener('install', e => {
         '/css/idiots.css',
         '/js/min/idiots.min.js',
         '/js/libraries/jquery.min.js',
-        '/offline.html',
-        '/svg/offline.svg'
+        '/svg/offline.svg',
+        offlineUrl
       ]).then(() => self.skipWaiting());
     })
   );
+});
+
+self.addEventListener('fetch', function(event) {
+  if (event.request.mode === 'navigate' || (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
+    event.respondWith(
+      fetch(event.request.url).catch(error => {
+        return caches.match(offlineUrl);
+      })
+    );
+  } else {
+    event.respondWith(caches.match(event.request).then(function (response) {
+      return response || fetch(event.request);
+      })
+    );
+  }
 });
