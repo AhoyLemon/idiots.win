@@ -1,29 +1,23 @@
 'use strict';
 
-
-// Here are some variables.
-const PRECACHE = 'precache-v25';
-const RUNTIME = 'runtime';
+const cacheName = 'v0.23';
 const offlineUrl = '/offline.html';
 
-
-// A list of local resources we always want to be cached.
-const PRECACHE_URLS = [
-  '/index.html',
-  '/manifest.json',
-  '/css/idiots.css',
-  '/js/min/idiots.min.js',
-  '/js/libraries/jquery.min.js',
-  '/svg/offline.svg',
-  offlineUrl
-];
-
-// The install handler takes care of precaching the resources we always need.
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(PRECACHE)
-      .then(cache => cache.addAll(PRECACHE_URLS))
-      .then(self.skipWaiting())
+self.addEventListener('install', e => {
+  // once the SW is installed, go ahead and fetch the resources
+  // to make this work offline
+  e.waitUntil(
+    caches.open(cacheName).then(cache => {
+      return cache.addAll([
+        '/index.html',
+        '/manifest.json',
+        '/css/idiots.css',
+        '/js/min/idiots.min.js',
+        '/js/libraries/jquery.min.js',
+        '/svg/offline.svg',
+        offlineUrl
+      ]).then(() => self.skipWaiting());
+    })
   );
 });
 
@@ -35,9 +29,6 @@ self.addEventListener('fetch', function(event) {
       })
     );
   } else {
-    event.respondWith(caches.match(event.request).then(function (response) {
-        return response
-      })
-    );
+    return response
   }
 });
