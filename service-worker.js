@@ -1,11 +1,10 @@
 'use strict';
 
-const PRECACHE = 'precache-v107';
+const PRECACHE = 'precache-v24';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
-  './', // Alias for index.html
   '/index.html',
   '/manifest.json',
   '/css/idiots.css',
@@ -33,7 +32,7 @@ self.addEventListener('fetch', function(event) {
     );
   } else {
     event.respondWith(caches.match(event.request).then(function (response) {
-      return response || fetch(event.request);
+        return response
       })
     );
   }
