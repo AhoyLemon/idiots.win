@@ -2,7 +2,7 @@
 
 const PRECACHE = 'precache-v24';
 const RUNTIME = 'runtime';
-const offlineURL = '/offline.html';
+const offlineUrl = '/offline.html';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
