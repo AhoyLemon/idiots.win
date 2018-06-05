@@ -5,7 +5,7 @@
     <title>OFFLINE: idiots.win</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <link href="https://fonts.googleapis.com/css?family=Catamaran:400,300,600" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="css/idiots.css?v=2018-05-04@22:58:46"/>
+    <link rel="stylesheet" href="css/idiots.css?v=2018-05-05@13:21:21"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="description" content="You need an internet connection to play this game."/>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
@@ -75,7 +75,7 @@
     </style>
     <main><img class="offline" src="svg/offline.svg"/></main>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/min/idiots.min.js?v=2018-05-04@22:58:46"></script>
+    <script src="js/min/idiots.min.js?v=2018-05-05@13:21:21"></script>
     <script type="text/javascript">
       //This is the "Offline page" service worker
       //Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
@@ -83,7 +83,7 @@
         console.log('[PWA Builder] active service worker found, no need to register')
       } else {
         //Register the ServiceWorker
-        navigator.serviceWorker.register('pwabuider-sw.js', {
+        navigator.serviceWorker.register('pwabuilder-sw.js', {
           scope: './'
         }).then(function(reg) {
           console.log('Service worker has been registered for scope: '+ reg.scope);
