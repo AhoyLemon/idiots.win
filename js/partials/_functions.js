@@ -207,6 +207,14 @@ function newRound(customQuery) {
   }
 }
 
+function inIframe () {
+  try {
+      return window.self !== window.top;
+  } catch (e) {
+      return true;
+  }
+}
+
 function addToHomeScreen(device,browser) {
   if (device == "android") {
     $('#HomescreenLink').text('add to home screen');

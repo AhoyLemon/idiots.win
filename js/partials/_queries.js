@@ -383,11 +383,6 @@ var rounds = [
     author: "Lemon"
   },
   {
-    query: "is it racist to",
-    right: "is it racist tosh",
-    author: "Lemon"
-  },
-  {
     query: "can i sl",
     right: "can i sleep in my car",
     author: "!paradigm!"

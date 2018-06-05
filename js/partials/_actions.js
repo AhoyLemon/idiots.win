@@ -57,6 +57,10 @@ $(document).ready(function() {
   
   grabPlayerScores();
   
+  if (inIframe() == true) {
+    top.location = self.location.href;
+  }
+
 });
 
 $('#Banner a.close').click(function() {
