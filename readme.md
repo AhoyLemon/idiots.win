@@ -1,4 +1,4 @@
-![idiots win](https://idiots.win/img/twitter-card.png)
+![Idiots win.](https://idiots.win/img/twitter-card.png)
 #### (The Google Autocomplete Guessing Game)
 
 ## What is this?
