@@ -1,3 +1,4 @@
+- var testing = true
 - var siteTitle = "Idiots win."
 - var siteURL = "https://idiots.win"
 - var pageTitle = "The Google Autocomplete Guessing Game"
@@ -10,6 +11,12 @@ doctype html
 html(lang="en")
   head
     include partials/_head.pug
+    if testing
+      script.
+        const testing = true
+    else
+      script.
+        const testing = false;
     script
       include ../js/partials/_analytics.js
   body

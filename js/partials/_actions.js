@@ -65,9 +65,11 @@ $(document).ready(function() {
 
 $('#Banner a.close').click(function() {
   $('#Banner').removeClass('visible');
+  sendEvent('Lemon Banner', 'banner closed', 'by Lemon banner closed');
 });
 
 $('#Results').on('click', 'li', function() {
+  //alert('WRONG ANSWER\n'+$(this).text()+'\n'+( parseInt($(this).attr('data-place')) + 1));
   if ($(this).hasClass('correct-answer') || $(this).hasClass('wrong-answer')) {
     // do nothing (you already guessed this.)
   } else {
@@ -79,8 +81,17 @@ $('#Results').on('click', 'li', function() {
       setTimeout(function(){ 
         erase();
       }, 300);
+
+      if (round.guesses < 2) {
+        sendEvent('CORRECT answer', $(this).text(), 'first try');
+      } else {
+        sendEvent('CORRECT answer', $(this).text(), round.guesses+' tries');
+      }
+
     } else {
       $(this).addClass('wrong-answer');
+
+      sendEvent('CORRECT answer', $(this).text(), '#'+ (parseInt($(this).attr('data-place')) + 1));
     }
   }
 });
@@ -88,6 +99,13 @@ $('#Results').on('click', 'li', function() {
 $('button.hamburger').click(function() {
   $(this).toggleClass('is-active');
   $('.sidebar').toggleClass('visible');
+
+  if ($('.sidebar').hasClass('visible')) {
+    sendEvent('SIDEBAR toggle', 'show');
+  } else {
+    sendEvent('SIDEBAR toggle', 'hide');
+  }
+  
 });
 
 $('#HomescreenLink').click(function() {

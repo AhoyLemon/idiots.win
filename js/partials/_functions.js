@@ -170,7 +170,7 @@ function correctAnswer() {
   } else {
     guessReadout = round.guesses + ' tries';
   }
-  sendGA('round complete', guessReadout, round.guesses);
+  sendEvent('round complete', guessReadout, round.guesses);
   round.guesses = 0;
 }
 

@@ -5,7 +5,7 @@
     <title>Idiots win.</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:400,300,600" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/idiots.css?v=2020-00-24@22:29:37">
+    <link rel="stylesheet" href="css/idiots.css?v=2020-01-15@12:38:13">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Get overwhelmed by the internet's collective consciousness as you guess the first thing that comes up in Google's autocomplete.">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
@@ -43,16 +43,39 @@
     <meta property="og:image:height" content="630">
     <meta property="og:description" content="Get overwhelmed by the internet's collective consciousness as you guess the first thing that comes up in Google's autocomplete.">
     <meta property="og:email" content="lemon@thefpl.us">
-    <script>function sendGA(c, a, l, v) {
+    <script>const testing = true</script>
+    <script>function sendEvent(c, a, l, v) {
   if (v) {
-    ga('send', 'event', { eventCategory: c, eventAction: a, eventLabel: l, eventValue:v });
-    console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l+', VALUE:'+v);
+    
+    gtag('event', a, {
+      'event_category': c,
+      'event_label': l,
+      'value': v
+    });
+
+    if (testing) {
+      console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l+', VALUE:'+v);
+    }
   } else if (l) {
-    ga('send', 'event', { eventCategory: c, eventAction: a, eventLabel: l });
-    console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l);
+    
+    gtag('event', a, {
+      'event_category': c,
+      'event_label': l
+    });
+
+    if (testing) {
+      console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l);
+    }
   } else {
-    ga('send', 'event', { eventCategory: c, eventAction: a });
-    console.log('CATEGORY: '+c+', ACTION:'+a);
+    
+    gtag('event', a, {
+      'event_category': c
+    });
+
+    if (testing) {
+      console.log('CATEGORY: '+c+', ACTION:'+a);
+    }
+    
   }
 }
     </script>
@@ -83,11 +106,11 @@
     </header>
     <div class="sidebar">
       <ul>
-        <li><span class="label">Game by</span><span class="indent"><a href="http://ahoylemon.xyz" onclick="sendGA('outside link', 'http://ahoylemon.xyz')">Lemon</a></span></li>
-        <li><span class="label">with a lot of help from</span><span class="indent"><a href="https://thefpl.us/meet/montrith" onclick="sendGA('outside link', 'https://thefpl.us/meet/montrith')">Montrith</a></span></li>
+        <li><span class="label">Game by</span><span class="indent"><a href="https://ahoylemon.xyz" onClick="sendEvent('outside link', 'http://ahoylemon.xyz', 'sidebar')">Lemon</a></span></li>
+        <li><span class="label">with a lot of help from</span><span class="indent"><a href="https://thefpl.us/meet/montrith" onClick="sendEvent('outside link', 'https://thefpl.us/meet/montrith', 'sidebar')">Montrith</a></span></li>
         <li><span class="label">and no involvement from</span><span class="indent">Google</span></li>
-        <li><span class="label">but you can</span><span class="indent"><a href="https://forms.gle/rUqgY6RYu6nbv2Hu9" onclick="sendGA('outside link', 'https://forms.gle/rUqgY6RYu6nbv2Hu9')">add a query</a> if you want!</span></li>
-        <li> <span class="label">More info in the </span><span class="indent"><a href="https://github.com/AhoyLemon/idiots.win/tree/gh-pages#the-google-autocomplete-guessing-game" onclick="sendGA('outside link', 'https://github.com/AhoyLemon/idiots.win')">GitHub Readme</a></span><span class="label">Current round count</span><span class="indent"><span class="number-of-rounds" id="RoundCount"></span></span></li>
+        <li><span class="label">but you can</span><span class="indent"><a href="https://forms.gle/rUqgY6RYu6nbv2Hu9" onClick="sendEvent('outside link', 'https://forms.gle/rUqgY6RYu6nbv2Hu9', 'sidebar')">add a query</a> if you want!</span></li>
+        <li> <span class="label">More info in the </span><span class="indent"><a href="https://github.com/AhoyLemon/idiots.win/tree/gh-pages#the-google-autocomplete-guessing-game" onclick="sendEvent('outside link', 'https://github.com/AhoyLemon/idiots.win', 'sidebar')">GitHub Readme</a></span><span class="label">Current round count</span><span class="indent"><span class="number-of-rounds" id="RoundCount"></span></span></li>
         <li id="AddToHomeScreen"><span class="label">but you should probably</span><span class="indent"> <a style="font-weight:bold;" id="HomescreenLink"></a><b>.</b></span></li>
       </ul>
     </div>
@@ -203,8 +226,8 @@
         ]
       }
     </script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/min/idiots.min.js?v=2020-00-24@22:29:37"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/min/idiots.min.js?v=2020-01-15@12:38:13"></script>
     <script type="text/javascript">
       //This is the "Offline page" service worker
       //Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
@@ -220,15 +243,12 @@
       }
       
     </script>
-    <!-- Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-15129990-18"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-15129990-18', 'auto');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-15129990-18');
       
     </script>
     <script type="text/javascript">window._trackJs = { token: "9947e081831c42b8aeb3a5fb81a152c4", application: "idiotsWin" }</script>

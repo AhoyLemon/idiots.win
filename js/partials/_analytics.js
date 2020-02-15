@@ -1,12 +1,34 @@
-function sendGA(c, a, l, v) {
+function sendEvent(c, a, l, v) {
   if (v) {
-    ga('send', 'event', { eventCategory: c, eventAction: a, eventLabel: l, eventValue:v });
-    console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l+', VALUE:'+v);
+    
+    gtag('event', a, {
+      'event_category': c,
+      'event_label': l,
+      'value': v
+    });
+
+    if (testing) {
+      console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l+', VALUE:'+v);
+    }
   } else if (l) {
-    ga('send', 'event', { eventCategory: c, eventAction: a, eventLabel: l });
-    console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l);
+    
+    gtag('event', a, {
+      'event_category': c,
+      'event_label': l
+    });
+
+    if (testing) {
+      console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l);
+    }
   } else {
-    ga('send', 'event', { eventCategory: c, eventAction: a });
-    console.log('CATEGORY: '+c+', ACTION:'+a);
+    
+    gtag('event', a, {
+      'event_category': c
+    });
+
+    if (testing) {
+      console.log('CATEGORY: '+c+', ACTION:'+a);
+    }
+    
   }
 }
