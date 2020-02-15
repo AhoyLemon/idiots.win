@@ -197,8 +197,9 @@ function newRound(customQuery) {
   //console.log(player);
   player.roundsThisSession++;
   if (player.roundsThisSession == 3) {
+    //new Audio('audio/bylemon.mp3').play();
+
     
-    new Audio('audio/bylemon.mp3').play();
     setTimeout(function(){ 
       //self.bannerVisible = true;
       $('#Banner').addClass('visible');
