@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>OFFLINE: idiots.win</title>
+    <title>OFFLINE: Idiots win.</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <link href="https://fonts.googleapis.com/css?family=Catamaran:400,300,600" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="css/idiots.css?v=2018-04-07@11:42:27"/>
+    <link rel="stylesheet" href="css/idiots.css?v=2020-02-23@09:37:32"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="You need an internet connection to play this game."/>
+    <meta name="description" content="Get overwhelmed by the internet's collective consciousness as you guess the first thing that comes up in Google's autocomplete."/>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png"/>
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png"/>
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png"/>
@@ -23,32 +23,35 @@
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
     <link rel="manifest" href="/manifest.json"/>
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
-    <meta name="apple-mobile-web-app-title" content="OFFLINE: idiots.win"/>
-    <meta name="application-name" content="OFFLINE: idiots.win"/>
+    <meta name="apple-mobile-web-app-title" content="OFFLINE: Idiots win."/>
+    <meta name="application-name" content="OFFLINE: Idiots win."/>
     <meta name="msapplication-TileColor" content="#ffc40d"/>
     <meta name="msapplication-TileImage" content="/mstile-144x144.png"/>
     <meta name="theme-color" content="#313131"/>
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:creator" content="@AhoyLemon"/>
     <meta name="twitter:site" content="@AhoyLemon"/>
-    <meta name="twitter:title" content="OFFLINE: idiots.win"/>
-    <meta name="twitter:description" content="You need an internet connection to play this game."/>
+    <meta name="twitter:title" content="OFFLINE: Idiots win."/>
+    <meta name="twitter:description" content="Get overwhelmed by the internet's collective consciousness as you guess the first thing that comes up in Google's autocomplete."/>
     <meta name="twitter:image" content="https://idiots.win/img/twitter-card.png"/>
     <meta name="twitter:url" content="https://idiots.win"/>
-    <meta property="og:title" content="OFFLINE: idiots.win"/>
+    <meta property="og:title" content="OFFLINE: Idiots win."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://idiots.win"/>
-    <meta property="og:image" content="https://idiots.win/img/og-image.png"/>
-    <meta property="og:description" content="You need an internet connection to play this game."/>
+    <meta property="og:image" content="https://idiots.win/img/og-wide.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:description" content="Get overwhelmed by the internet's collective consciousness as you guess the first thing that comes up in Google's autocomplete."/>
     <meta property="og:email" content="lemon@thefpl.us"/>
   </head>
   <body>
     <div class="sidebar">
       <ul>
-        <li><span class="label">Game by</span><span class="indent"><a href="http://ahoylemon.xyz" target="blank" onclick="sendGA('outside link', 'http://ahoylemon.xyz')">Lemon</a></span></li>
-        <li><span class="label">with a lot of help from</span><span class="indent"><a href="https://thefpl.us/meet/montrith" target="blank" onclick="sendGA('outside link', 'https://thefpl.us/meet/montrith')">Montrith</a></span></li>
+        <li><span class="label">Game by</span><span class="indent"><a href="https://ahoylemon.xyz" onClick="sendEvent('outside link', 'http://ahoylemon.xyz', 'sidebar')">Lemon</a></span></li>
+        <li><span class="label">with a lot of help from</span><span class="indent"><a href="https://thefpl.us/meet/montrith" onClick="sendEvent('outside link', 'https://thefpl.us/meet/montrith', 'sidebar')">Montrith</a></span></li>
         <li><span class="label">and no involvement from</span><span class="indent">Google</span></li>
-        <li> <span class="label">More info in the </span><span class="indent"><a href="https://github.com/AhoyLemon/idiots.win/tree/gh-pages#the-google-autocomplete-guessing-game" target="blank" onclick="sendGA('outside link', 'https://github.com/AhoyLemon/idiots.win')">GitHub Readme</a></span><span class="label">Current round count</span><span class="indent"><span class="number-of-rounds" id="RoundCount"></span></span></li>
+        <li><span class="label">but you can</span><span class="indent"><a href="https://forms.gle/rUqgY6RYu6nbv2Hu9" onClick="sendEvent('outside link', 'https://forms.gle/rUqgY6RYu6nbv2Hu9', 'sidebar')">add a query</a> if you want!</span></li>
+        <li> <span class="label">More info in the </span><span class="indent"><a href="https://github.com/AhoyLemon/idiots.win/tree/gh-pages#the-google-autocomplete-guessing-game" onclick="sendEvent('outside link', 'https://github.com/AhoyLemon/idiots.win', 'sidebar')">GitHub Readme</a></span><span class="label">Current round count</span><span class="indent"><span class="number-of-rounds" id="RoundCount"></span></span></li>
         <li id="AddToHomeScreen"><span class="label">but you should probably</span><span class="indent"> <a style="font-weight:bold;" id="HomescreenLink"></a><b>.</b></span></li>
       </ul>
     </div>
@@ -74,30 +77,29 @@
       
     </style>
     <main><img class="offline" src="svg/offline.svg"/></main>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="js/min/idiots.min.js?v=2018-04-07@11:42:27"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/min/idiots.min.js?v=2020-02-23@09:37:32"></script>
     <script type="text/javascript">
-      // Register the service worker
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }).catch(function(err) {
-          // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
+      //This is the "Offline page" service worker
+      //Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+      if (navigator.serviceWorker.controller) {
+        console.log('[PWA Builder] active service worker found, no need to register')
+      } else {
+        //Register the ServiceWorker
+        navigator.serviceWorker.register('pwabuilder-sw.js', {
+          scope: './'
+        }).then(function(reg) {
+          console.log('Service worker has been registered for scope: '+ reg.scope);
         });
       }
       
     </script>
-    <!-- Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-15129990-18"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      
-      ga('create', 'UA-15129990-18', 'auto');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-15129990-18');
       
     </script>
     <script type="text/javascript">window._trackJs = { token: "9947e081831c42b8aeb3a5fb81a152c4", application: "idiotsWin" }</script>

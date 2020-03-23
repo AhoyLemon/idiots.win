@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /pug
+Disallow: /nfw
+
+sitemap: https://damn.dog/sitemap.xml
