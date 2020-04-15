@@ -3,14 +3,13 @@ include partials/_variables.pug
 html(lang="en")
   head
     include partials/_head.pug
+  body
     if testing
       script.
-        const testing = true
+        const testing = true;
     else
       script.
         const testing = false;
-    //-
-  body
     script
       include ../js/partials/_analytics.js
     include partials/_header.pug
