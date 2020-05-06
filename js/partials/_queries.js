@@ -269,7 +269,7 @@ var rounds = [
   },
   {
     query: "most creative ways to",
-    right: "where the hell is matt",
+    right: "most creative ways to ask a girl to prom",
     author: "Lemon"
   },
   {
@@ -588,11 +588,6 @@ var rounds = [
     author: "Montrith"
   },
   {
-    query: "is it poisonous",
-    right: "is it poisonous to eat apple seeds",
-    author: "Montrith"
-  },
-  {
     query: "how to lie to",
     right: "how to lie to your parents",
     author: "Montrith"
@@ -646,7 +641,17 @@ var rounds = [
     query: "can mountain dew",
     right: "can mountain dew kill you",
     author: "Lemon"
-  }
+  },
+  {
+    query: "can dogs",
+    right: "can dogs get coronavirus",
+    author: "Austin W."
+  },
+  {
+    query: "how big is",
+    right: "how big is an acre",
+    author: "Lemon"
+  },
 ];
 
 // USE THIS URL....
