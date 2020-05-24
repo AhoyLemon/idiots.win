@@ -1,7 +1,7 @@
-script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+script(src="js/libraries/jquery.min.js")
 script(src="js/min/idiots.min.js?v="+lastUpdated)
 
-script(type="text/javascript").
+//-script(type="text/javascript").
   //This is the "Offline page" service worker
   //Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
   if (navigator.serviceWorker.controller) {
@@ -16,7 +16,7 @@ script(type="text/javascript").
   }
 
 //- Global site tag (gtag.js) - Google Analytics
-script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-15129990-18')
+script(async src='https://www.googletagmanager.com/gtag/js?id=UA-15129990-18')
 script.
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

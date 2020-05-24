@@ -33,6 +33,14 @@ function erase() {
 }
 
 function pullResults() {
+  /*
+  fetch('https://suggestqueries.google.com/complete/search?output=toolbar&hl=en&q=why%20do').then(function(response) {
+    response.json().then(function(parsedJson) {
+      console.log('This is the parsed json', parsedJson);
+    });
+  });
+  */
+
   $.getJSON("https://suggestqueries.google.com/complete/search?callback=?", { 
     "hl":"en", // Language                  
     "jsonp":"suggestCallBack", // jsonp callback function name
@@ -48,7 +56,7 @@ function pullResults() {
         if (n === 0) {
           correctAnswer = data[1][key][0];
         } else {
-         answers.push([data[1][key][0], n]);
+          answers.push([data[1][key][0], n]);
         }
         n++;
       }
@@ -71,6 +79,7 @@ function pullResults() {
       }
     });
   };
+
 }
 
 function grabPlayerScores() {
