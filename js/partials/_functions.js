@@ -1,6 +1,3 @@
-// jshint -W117
-// jshint -W098
-
 function shuffle(o) {
   for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
   return o;
@@ -9,7 +6,6 @@ function shuffle(o) {
 function type() {
   captionEl.html(myQuery.substr(0, captionLength++));
   if(captionLength < myQuery.length+1) {
-    //setTimeout('type()', 101);
     setTimeout(function(){ 
       type();
     }, 101);
@@ -21,7 +17,6 @@ function type() {
 function erase() {
   captionEl.html(myQuery.substr(0, captionLength--));
   if(captionLength >= 0) {
-    //setTimeout('erase()', 101);
     setTimeout(function(){ 
       erase();
     }, 101);
@@ -33,13 +28,6 @@ function erase() {
 }
 
 function pullResults() {
-  /*
-  fetch('https://suggestqueries.google.com/complete/search?output=toolbar&hl=en&q=why%20do').then(function(response) {
-    response.json().then(function(parsedJson) {
-      console.log('This is the parsed json', parsedJson);
-    });
-  });
-  */
 
   $.getJSON("https://suggestqueries.google.com/complete/search?callback=?", { 
     "hl":"en", // Language                  
@@ -203,14 +191,9 @@ function newRound(customQuery) {
   }
   $('#Results').empty();
   type();
-  //console.log(player);
   player.roundsThisSession++;
   if (player.roundsThisSession == 3) {
-    //new Audio('audio/bylemon.mp3').play();
-
-    
     setTimeout(function(){ 
-      //self.bannerVisible = true;
       $('#Banner').addClass('visible');
     }, 800);
     
