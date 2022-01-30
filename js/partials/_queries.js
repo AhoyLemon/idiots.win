@@ -608,11 +608,6 @@ var rounds = [
     author: "!paradigm!"
   },
   {
-    query: "is the gov",
-    right: "is the government hiding aliens",
-    author: "!paradigm!"
-  },
-  {
     query: "my mind is be",
     right: "my mind is being controlled",
     author: "!paradigm!"
@@ -650,6 +645,11 @@ var rounds = [
   {
     query: "how big is",
     right: "how big is an acre",
+    author: "Lemon"
+  },
+  {
+    query: "boris johnson is",
+    right: "boris johnson is american",
     author: "Lemon"
   },
 ];
