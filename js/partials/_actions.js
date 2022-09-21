@@ -3,11 +3,11 @@
 $(document).ready(function() {
   roundCount = rounds.length + 1;
   $('#RoundCount').text(roundCount);
-  if (window.location.search && !window.location.search.includes('=')) {
-    var q = window.location.search.substring(1);
-    var qd = decodeURIComponent(q);
+  if (window.location.search) {
+    const searchParams = new URLSearchParams(window.location.search);
+    const query = (searchParams.get('q') || searchParams.get('query') || searchParams.get('search') );
     setTimeout(function(){ 
-      newRound(qd);
+      newRound(query);
     }, 300);
   } else {
     reRoll = 0;
