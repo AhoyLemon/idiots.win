@@ -652,6 +652,56 @@ var rounds = [
     right: "boris johnson is american",
     author: "Lemon"
   },
+  {
+    query: "is the earth",
+    right: "is the earth spinning faster",
+    author: "Simone"
+  },
+  {
+    query: "are fart",
+    right: "are farts flammable",
+    author: "Simone"
+  },
+  {
+    query: "how come my",
+    right: "boris johnson is american",
+    author: "Lemon"
+  },
+  {
+    query: "can i put",
+    right: "can i put neosporin on my dog",
+    author: "rodentkid"
+  },
+  {
+    query: "does it matte",
+    right: "does it matter when you take creatine",
+    author: "rodentkid"
+  },
+  {
+    query: "is it legal to",
+    right: "is it legal to marry your cousin",
+    author: "rodentkid"
+  },
+  {
+    query: "what to do if the ",
+    right: "what to do if the cartel is after you",
+    author: "rodentkid"
+  },
+  {
+    query: "what in the hell ",
+    right: "what in the hell is even that",
+    author: "Lemon"
+  },
+  {
+    query: "google are y",
+    right: "google are you mad",
+    author: "Simone"
+  },
+  {
+    query: "are cops",
+    right: "are cops allowed to touch your car",
+    author: "Simone"
+  },
 ];
 
 // USE THIS URL....
