@@ -702,6 +702,16 @@ var rounds = [
     right: "are cops allowed to touch your car",
     author: "Simone"
   },
+  {
+    query: "how to unb",
+    right: "how to unblock youtube",
+    author: "Jeff"
+  },
+  {
+    query: "what happens when",
+    right: "what happens when you die",
+    author: "Jeff"
+  },
 ];
 
 // USE THIS URL....
